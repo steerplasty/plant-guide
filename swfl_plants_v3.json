@@ -90,9 +90,9 @@
       ]
     },
     "schema_version": "3.0.0",
-    "schema_notes": "v3.0 adds family, plant_tier, scenarios, usda_zone, has_invasive_lookalike, hoa_friendly, pollinator_value, where_to_buy. Origin: beneficial_non_native → non_native_low_risk. beneficial_score: numeric → exceptional/good/limited. | images updated: primary, gallery (max 20), captions, photo_credits, community fields.",
+    "schema_notes": "v3.0 adds family, plant_tier, scenarios, usda_zone, has_invasive_lookalike, hoa_friendly, pollinator_value, where_to_buy. Origin: beneficial_non_native → non_native_low_risk. beneficial_score: numeric → exceptional/good/limited.",
     "data_completeness": {
-      "fully_researched": 4,
+      "fully_researched": 22,
       "needs_review": 263,
       "total": 267
     },
@@ -202,12 +202,8 @@
       "description": "The single most ecologically important tree you can plant in SW Florida. Supports hundreds of caterpillar and moth species — critical food for nesting birds. Acorns feed squirrels, deer, turkeys, blue jays, and woodpeckers year-round. Massive spreading canopy provides prime nesting sites for eagles, owls, and songbirds. Long-lived, hurricane resistant, and deeply beautiful. Give it significant room — it spreads as wide as it is tall.",
       "warnings": [],
       "images": {
-        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781053113/PXL_20250717_185128391_csxxxk.jpg",
+        "primary": "",
         "gallery": [],
-        "captions": [
-          ""
-        ],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -418,8 +414,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -443,21 +437,22 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 3,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 20,
+        "dry_season_irrigation": false
       },
       "soil_type": [
         "sandy",
+        "rocky",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "adaptable",
+      "soil_ph_min": 5.5,
+      "soil_ph_max": 8.0,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -465,45 +460,47 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "non_invasive",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "24-36",
+      "growth_notes": "Fast-growing once established. Can add 2-3 feet per year in ideal conditions.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 20,
+      "spread_max_ft": 40,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Minimal pruning needed. Remove dead or crossing branches only. Never top. The natural irregular form is part of its beauty.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
-      "beneficial_score": "good",
-      "beneficial_score_notes": "",
+      "easy_to_grow_notes": "One of the easiest trees in SW Florida. Roots from cuttings, tolerates drought, salt, and poor soil. Essentially no care once established.",
+      "beneficial_score": "exceptional",
+      "beneficial_score_notes": "Keystone native supporting migratory birds, year-round fruit production, and coastal hammock habitat.",
       "best_time_to_plant": [
-        "fall"
+        "november"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "verified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "No significant concerns — roots are non-invasive"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -523,13 +520,17 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at most SW Florida native plant nurseries and FNPS chapter sales",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS",
+        "Florida Native Plant Society",
+        "Lee County Extension"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -546,7 +547,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "varies",
-      "hoa_notes": "",
+      "hoa_notes": "Generally HOA approved — attractive year-round, non-invasive roots, moderate size",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "specialty_nursery",
@@ -566,7 +567,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "pinus-elliottii",
@@ -597,8 +599,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -622,21 +622,21 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 12,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 12,
+        "dry_season_irrigation": false
       },
       "soil_type": [
         "sandy",
-        "any"
+        "acidic"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "acidic",
+      "soil_ph_min": 4.5,
+      "soil_ph_max": 6.5,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "verified",
       "florida_zone": [
         "9b",
         "10a",
@@ -644,45 +644,48 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "deep",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "12-24",
+      "growth_notes": "Moderate growth rate. Faster in ideal sandy acidic soil. Very slow in alkaline fill soils common in Cape Coral.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 20,
+      "spread_max_ft": 40,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Never top a slash pine — it permanently damages structure and invites disease. Remove only dead or broken branches. Natural canopy shape requires no pruning.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
+      "easy_to_grow_notes": "Easy in the right soil — sandy and acidic. Will struggle and die in alkaline fill or clay soils. Overwatering via lawn irrigation is the most common cause of death.",
       "beneficial_score": "exceptional",
-      "beneficial_score_notes": "",
+      "beneficial_score_notes": "Dominant species of Florida flatwoods ecosystem. Supports specialist birds, fire ecology, and serves as critical remnant habitat in residential areas.",
       "best_time_to_plant": [
-        "fall"
+        "october"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "moderate",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Irrigated lawn areas — excess water will kill",
+        "Clay or alkaline fill soils — check soil before planting"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "unverified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -702,13 +705,17 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at Aloha Native Plants (Fort Myers), Koreshan Nursery, and FNPS sales",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS",
+        "Florida Native Plant Society",
+        "Florida Forest Service"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -725,7 +732,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "varies",
-      "hoa_notes": "",
+      "hoa_notes": "HOA approval varies — some communities restrict pines due to needle drop and size. Check before planting.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "specialty_nursery",
@@ -740,7 +747,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "verified"
     },
     {
       "id": "taxodium-distichum",
@@ -770,8 +778,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -795,21 +801,23 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None near water — supplement weekly if planted upland",
+        "establishment_period_months": 12,
+        "tolerates_flooding": true,
+        "tolerates_drought_weeks": 6,
+        "dry_season_irrigation": true
       },
       "soil_type": [
         "sandy",
+        "loamy",
+        "wet",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "slightly_acidic",
+      "soil_ph_min": 4.5,
+      "soil_ph_max": 7.0,
+      "soil_drainage": "wet_to_well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -817,45 +825,48 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "non_invasive",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "12-24",
+      "growth_notes": "Moderate growth rate, faster when roots reach water. Knees grow slowly over many years.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 15,
+      "spread_max_ft": 30,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Minimal pruning needed. Never remove cypress knees — they are functional root structures. Remove dead branches only.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
+      "easy_to_grow_notes": "Easy near water, moderate effort upland. The fall color and winter silhouette make it one of the most rewarding native trees in SW Florida.",
       "beneficial_score": "exceptional",
-      "beneficial_score_notes": "",
+      "beneficial_score_notes": "Critical nesting habitat for wood ducks, herons, and ospreys. Entire cypress dome ecosystems depend on this species.",
       "best_time_to_plant": [
-        "fall"
+        "april"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "long",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
-      "stratification": false,
+      "stratification": true,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Septic systems — roots seek water aggressively",
+        "Far from any water source without supplemental irrigation plan"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -875,13 +886,17 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at most SW Florida native nurseries and SFWMD free native plant giveaways",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS",
+        "Florida Native Plant Society",
+        "Lee County Extension"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -898,7 +913,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "varies",
-      "hoa_notes": "",
+      "hoa_notes": "Generally HOA approved near water features. Some HOAs restrict near property lines due to size.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "specialty_nursery",
@@ -913,7 +928,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "ilex-cassine",
@@ -945,8 +961,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -982,7 +996,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5,
+      "soil_ph_min": 5.0,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_moderate",
       "soil_confidence": "unverified",
@@ -1134,8 +1148,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1171,7 +1183,7 @@
         "any"
       ],
       "soil_ph_preference": "slightly acidic to neutral",
-      "soil_ph_min": 5,
+      "soil_ph_min": 5.0,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unverified",
@@ -1325,8 +1337,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1350,21 +1360,23 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 3,
+        "tolerates_flooding": true,
+        "tolerates_drought_weeks": 16,
+        "dry_season_irrigation": false
       },
       "soil_type": [
         "sandy",
+        "loamy",
+        "wet",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "adaptable",
+      "soil_ph_min": 4.5,
+      "soil_ph_max": 7.5,
+      "soil_drainage": "well_drained_to_wet",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -1372,45 +1384,47 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "non_invasive",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "24-48",
+      "growth_notes": "One of SW Florida's fastest native shrub-trees. Can reach 15 feet in 3-4 years in ideal conditions.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 8,
+      "spread_max_ft": 15,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Prune in March after berry season ends and before new growth flush. Selective thinning preferred over shearing. Can be maintained as hedge or allowed to develop as multi-trunk small tree.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
+      "easy_to_grow_notes": "One of the easiest and most rewarding natives. Fixes nitrogen, tolerates wet and dry conditions, grows fast, and produces wildlife-critical berries with zero maintenance.",
       "beneficial_score": "exceptional",
-      "beneficial_score_notes": "",
+      "beneficial_score_notes": "Critical winter food source for migratory birds. Nitrogen-fixing, fast-growing, and adaptable — maximum ecological return for minimum effort.",
       "best_time_to_plant": [
-        "fall"
+        "november"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "No significant concerns"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -1430,13 +1444,16 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at virtually all SW Florida nurseries and big box garden centers",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS",
+        "Florida Native Plant Society"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -1453,7 +1470,7 @@
       ],
       "has_invasive_lookalike": true,
       "hoa_friendly": "varies",
-      "hoa_notes": "",
+      "hoa_notes": "HOA approved in most communities. Natural form may require periodic shaping to satisfy HOA requirements.",
       "pollinator_value": "good",
       "where_to_buy": [
         "specialty_nursery",
@@ -1474,7 +1491,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "diospyros-virginiana",
@@ -1507,8 +1525,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1532,21 +1548,22 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 12,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 14,
+        "dry_season_irrigation": false
       },
       "soil_type": [
         "sandy",
+        "loamy",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "slightly_acidic",
+      "soil_ph_min": 4.5,
+      "soil_ph_max": 7.0,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -1554,45 +1571,47 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "deep",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "12-18",
+      "growth_notes": "Slow to moderate growth rate. Slow to establish in first 2-3 years while developing deep taproot, then faster growth.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 15,
+      "spread_max_ft": 35,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Minimal pruning needed. The gnarly branching structure is architecturally attractive — prune only for clearance or to remove dead wood. Best done in late winter.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
+      "easy_to_grow_notes": "Easy once established but requires patience — slow to establish and years to first fruit. The long-term payoff in wildlife value and fruit production is exceptional.",
       "beneficial_score": "exceptional",
-      "beneficial_score_notes": "",
+      "beneficial_score_notes": "Fruit feeds 40+ bird and mammal species. Host plant for multiple large moth species. Deeply underused native with extraordinary wildlife value.",
       "best_time_to_plant": [
-        "fall"
+        "december"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "long",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
-      "stratification": false,
+      "stratification": true,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "No significant concerns — taproot is deep not spreading"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "unverified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -1612,13 +1631,16 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at native plant nurseries and FNPS sales — less common at big box stores",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS",
+        "Florida Native Plant Society"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -1635,7 +1657,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "varies",
-      "hoa_notes": "",
+      "hoa_notes": "Generally HOA approved. Attractive bark and form year-round. Fruit drop may concern some HOAs.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "specialty_nursery",
@@ -1650,7 +1672,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "juniperus-silicicola",
@@ -1682,8 +1705,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1707,21 +1728,22 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 6,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 20,
+        "dry_season_irrigation": false
       },
       "soil_type": [
         "sandy",
+        "rocky",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "adaptable",
+      "soil_ph_min": 5.0,
+      "soil_ph_max": 8.0,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -1729,45 +1751,48 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "non_invasive",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "12-18",
+      "growth_notes": "Moderate growth rate. Fastest in full sun and well-drained sandy soil. Slow in shade or wet conditions.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 10,
+      "spread_max_ft": 20,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Prune lightly in spring to shape if needed. Never cut back into bare wood — junipers do not regenerate from old wood. Remove only living green growth.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
-      "beneficial_score": "exceptional",
-      "beneficial_score_notes": "",
+      "easy_to_grow_notes": "Very easy in the right location — full sun and excellent drainage are non-negotiable. One of the most drought-tolerant native trees available. Minimal care once established.",
+      "beneficial_score": "good",
+      "beneficial_score_notes": "Critical berry source for winter migrants especially cedar waxwings. Year-round dense evergreen cover for nesting birds.",
       "best_time_to_plant": [
-        "fall"
+        "november"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Wet or poorly drained areas — will die in soggy soil",
+        "Near diseased eastern red cedars — some diseases transmit between species"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -1787,13 +1812,16 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at native nurseries — specify Juniperus silicicola not eastern red cedar or ornamental junipers",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS",
+        "Florida Native Plant Society"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -1810,7 +1838,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "varies",
-      "hoa_notes": "",
+      "hoa_notes": "HOA approved and popular for privacy screening. Dense evergreen form makes excellent formal hedge.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "specialty_nursery",
@@ -1825,7 +1853,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "ficus-aurea",
@@ -1858,8 +1887,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1883,21 +1910,23 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 6,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 12,
+        "dry_season_irrigation": false
       },
       "soil_type": [
         "sandy",
+        "loamy",
+        "rocky",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "adaptable",
+      "soil_ph_min": 5.0,
+      "soil_ph_max": 8.0,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -1905,45 +1934,51 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "spreading",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "24-48",
+      "growth_notes": "Fast-growing once established. Aerial roots expand the tree's footprint significantly over time.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 30,
+      "spread_max_ft": 80,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Prune only when young to establish clearance. Mature trees are protected in many counties — verify before significant pruning. Wear gloves — milky sap is a skin irritant.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
+      "easy_to_grow_notes": "Extremely easy to grow but requires appropriate siting from day one. Plant in the wrong place and it becomes a serious problem. Plant in the right place and it becomes a wildlife magnet requiring zero care.",
       "beneficial_score": "exceptional",
-      "beneficial_score_notes": "",
+      "beneficial_score_notes": "Single highest wildlife-value tree available for SW Florida. 28+ bird species eat the fruit. Critical for hammock habitat restoration.",
       "best_time_to_plant": [
-        "fall"
+        "october"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "All structures minimum 30 ft",
+        "Pools and pool decks",
+        "Driveways and pavement",
+        "Utility lines",
+        "Septic systems"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -1963,13 +1998,17 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at native nurseries and FNPS sales — buy small",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS",
+        "Florida Native Plant Society",
+        "Lee County Extension"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -1986,7 +2025,7 @@
       ],
       "has_invasive_lookalike": true,
       "hoa_friendly": "varies",
-      "hoa_notes": "",
+      "hoa_notes": "HOA approval varies widely. Mature specimens are protected under county ordinances — verify with HOA before planting near property lines.",
       "pollinator_value": "good",
       "where_to_buy": [
         "specialty_nursery",
@@ -2001,7 +2040,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "conocarpus-erectus",
@@ -2032,8 +2072,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2224,8 +2262,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2260,7 +2296,7 @@
         "rocky"
       ],
       "soil_ph_preference": "adaptable to alkaline",
-      "soil_ph_min": 5,
+      "soil_ph_min": 5.0,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "verified",
@@ -2414,8 +2450,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2451,7 +2485,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8,
+      "soil_ph_max": 8.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -2603,8 +2637,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2792,8 +2824,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2829,8 +2859,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5,
-      "soil_ph_max": 8,
+      "soil_ph_min": 5.0,
+      "soil_ph_max": 8.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -2985,8 +3015,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3010,20 +3038,22 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 12,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 16,
+        "dry_season_irrigation": false
       },
       "soil_type": [
+        "sandy",
+        "loamy",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "slightly_acidic",
+      "soil_ph_min": 5.5,
+      "soil_ph_max": 7.5,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -3031,45 +3061,49 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
-      "florida_friendly_approved": null,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "invasive_roots": "spreading",
+      "florida_friendly_approved": true,
+      "growth_annual_inches": "36-60",
+      "growth_notes": "Very fast growing — one of the fastest ornamental trees in SW Florida. Can reach 20 feet in 3-4 years from seed.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 30,
+      "spread_max_ft": 60,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Structural pruning when young to establish strong central leader and remove narrow V-crotches. Avoid heavy pruning after June — it removes flower buds forming for next season. Remove seed pods if desired to reduce litter.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
-      "beneficial_score": "good",
-      "beneficial_score_notes": "",
+      "easy_to_grow_notes": "Very easy in SW Florida. Fast growth, spectacular flowers, drought tolerant. Main challenge is siting correctly — the spreading root system and wide canopy need room. Do not plant near pavement.",
+      "beneficial_score": "moderate",
+      "beneficial_score_notes": "Good nectar source for hummingbirds and bees during bloom. Limited year-round wildlife value compared to natives. High landscape value.",
       "best_time_to_plant": [
-        "fall"
+        "november"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "moderate",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "verified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "verified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Driveways and pavement — surface roots will lift",
+        "Foundations and structures — minimum 20 ft",
+        "Pools"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -3089,13 +3123,15 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at virtually all SW Florida nurseries and big box garden centers",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -3112,7 +3148,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "true",
-      "hoa_notes": "",
+      "hoa_notes": "Usually HOA approved. Some HOAs restrict due to seed pod litter and surface roots near pavement.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "box_store",
@@ -3127,7 +3163,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "plumeria-spp",
@@ -3158,8 +3195,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3183,20 +3218,21 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "Weekly during growing season — none during dormancy",
+        "establishment_period_months": 3,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 16,
+        "dry_season_irrigation": false
       },
       "soil_type": [
+        "sandy",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "slightly_acidic",
+      "soil_ph_min": 6.0,
+      "soil_ph_max": 7.0,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -3204,45 +3240,48 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
-      "florida_friendly_approved": null,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "invasive_roots": "non_invasive",
+      "florida_friendly_approved": true,
+      "growth_annual_inches": "12-24",
+      "growth_notes": "Moderate growth rate during growing season. No growth during winter dormancy. Growth pattern is upward and branching — spread is determined by branching habit.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 8,
+      "spread_max_ft": 20,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Prune only in late winter just before new growth begins. Cut back to desired shape — plumeria branches freely from cut points. Wear gloves — milky sap is a skin irritant.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
-      "beneficial_score": "good",
-      "beneficial_score_notes": "",
+      "easy_to_grow_notes": "Easy in SW Florida once you understand the dormancy cycle. The biggest mistake is watering in winter. Follow sun and drainage requirements and it performs beautifully with minimal effort.",
+      "beneficial_score": "low",
+      "beneficial_score_notes": "Limited native wildlife value. Good nectar source for hummingbirds and hawkmoths. Primary ecological value is as host plant for frangipani hawkmoth caterpillar.",
       "best_time_to_plant": [
-        "fall"
+        "may"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "verified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Low-lying areas with poor drainage",
+        "Grass areas with regular irrigation — too much water during dormancy"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "unverified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -3262,13 +3301,15 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at all SW Florida nurseries, farmers markets, and Florida Plumeria Council sales",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -3285,7 +3326,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "true",
-      "hoa_notes": "",
+      "hoa_notes": "HOA approved in virtually all communities. Small footprint and attractive year-round form.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "box_store",
@@ -3300,7 +3341,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "tabebuia-spp",
@@ -3330,8 +3372,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3355,20 +3395,22 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient. Dry stress in winter improves bloom.",
+        "establishment_period_months": 12,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 14,
+        "dry_season_irrigation": false
       },
       "soil_type": [
+        "sandy",
+        "loamy",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "adaptable",
+      "soil_ph_min": 5.5,
+      "soil_ph_max": 7.5,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -3376,45 +3418,47 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "non_invasive",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "18-24",
+      "growth_notes": "Moderate growth rate. Faster in sandy well-drained soil with full sun. Slower in heavy soil.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 15,
+      "spread_max_ft": 30,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Prune only after the bloom period ends in spring. Remove crossing branches and narrow crotches when young to develop good structure. Never prune after October — you will remove flower buds.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
-      "beneficial_score": "good",
-      "beneficial_score_notes": "",
+      "easy_to_grow_notes": "Easy in SW Florida. The bloom is one of the best payoffs in local gardening — a week of pure flower color with no leaves is unforgettable. Requires patience as young trees bloom sparsely.",
+      "beneficial_score": "moderate",
+      "beneficial_score_notes": "Good hummingbird and bee nectar source during bloom. Limited year-round wildlife value. High landscape value for the annual bloom spectacle.",
       "best_time_to_plant": [
-        "fall"
+        "november"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "moderate",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Heavy shade from other trees — will suppress blooming"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -3434,13 +3478,15 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at most SW Florida nurseries — specify species for specific flower color",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -3457,7 +3503,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "true",
-      "hoa_notes": "",
+      "hoa_notes": "HOA approved and highly valued for the spectacular seasonal bloom. One of the most popular ornamental trees in SW Florida HOA communities.",
       "pollinator_value": "good",
       "where_to_buy": [
         "box_store",
@@ -3472,7 +3518,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "callistemon-spp",
@@ -3502,8 +3549,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3527,20 +3572,22 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 6,
+        "tolerates_flooding": true,
+        "tolerates_drought_weeks": 12,
+        "dry_season_irrigation": false
       },
       "soil_type": [
+        "sandy",
+        "loamy",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "slightly_acidic",
+      "soil_ph_min": 5.5,
+      "soil_ph_max": 7.0,
+      "soil_drainage": "well_drained_to_moderate",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -3548,45 +3595,47 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
+      "invasive_roots": "non_invasive",
       "florida_friendly_approved": true,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "growth_annual_inches": "18-24",
+      "growth_notes": "Moderate to fast growth rate in SW Florida's climate. Multiple bloom cycles per year with correct pruning.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 8,
+      "spread_max_ft": 15,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Prune lightly after each bloom cycle — remove only the spent flower tip and 2-3 inches of growth. This triggers a new growth flush that will bloom again in 6-8 weeks. Never cut back into old bare wood.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
+      "easy_to_grow_notes": "One of the easiest ornamental trees in SW Florida. Multiple bloom cycles, hummingbird magnet, tolerates coastal conditions. Verify you have the ornamental species not the invasive Melaleuca quinquenervia.",
       "beneficial_score": "good",
-      "beneficial_score_notes": "",
+      "beneficial_score_notes": "Exceptional hummingbird plant. Good bee and butterfly nectar source. Multiple bloom periods per year maximize wildlife value.",
       "best_time_to_plant": [
-        "fall"
+        "november"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Do not confuse with or plant near invasive Melaleuca quinquenervia"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "verified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -3606,13 +3655,15 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at all SW Florida nurseries and big box garden centers — very widely stocked",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -3629,7 +3680,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "true",
-      "hoa_notes": "",
+      "hoa_notes": "HOA approved and very popular. Compact form and attractive flowers make it a common HOA-approved landscape choice.",
       "pollinator_value": "good",
       "where_to_buy": [
         "box_store",
@@ -3648,7 +3699,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "lagerstroemia-indica",
@@ -3679,8 +3731,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3704,20 +3754,22 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "None — rainfall sufficient once established",
+        "establishment_period_months": 6,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 10,
+        "dry_season_irrigation": false
       },
       "soil_type": [
+        "sandy",
+        "loamy",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "slightly_acidic",
+      "soil_ph_min": 5.0,
+      "soil_ph_max": 6.5,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -3725,45 +3777,48 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
-      "florida_friendly_approved": null,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "invasive_roots": "non_invasive",
+      "florida_friendly_approved": true,
+      "growth_annual_inches": "12-24",
+      "growth_notes": "Moderate growth rate. Faster with appropriate fertilization. Size varies enormously by variety — choose the right size for the space.",
+      "growth_confidence": "unverified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 6,
+      "spread_max_ft": 25,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Remove only crossing branches, basal suckers, and spent seed heads. NEVER top — this is the most common and damaging mistake made with crepe myrtles in SW Florida. If the tree is too large, replace it with a smaller variety.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
-      "beneficial_score": "good",
-      "beneficial_score_notes": "",
+      "easy_to_grow_notes": "Easy in SW Florida with one important rule — never top it. Choose the right variety size for the space, plant in full sun, and enjoy multiple bloom periods and outstanding fall color with minimal care.",
+      "beneficial_score": "low",
+      "beneficial_score_notes": "Good bee nectar source during bloom. Fall seed heads eaten by goldfinches. Limited ecological value compared to natives but excellent landscape value.",
       "best_time_to_plant": [
-        "fall"
+        "march"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "unverified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "unverified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Coastal saltwater — salt sensitive",
+        "Shaded areas — will not bloom well and becomes mildew-prone"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "unverified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -3783,13 +3838,15 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at all SW Florida nurseries and big box garden centers in an enormous range of varieties",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -3810,7 +3867,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "true",
-      "hoa_notes": "",
+      "hoa_notes": "One of the most HOA-approved ornamental trees in the American South. Excellent for formal landscapes.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "box_store",
@@ -3825,7 +3882,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "sabal-palmetto",
@@ -3859,8 +3917,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -4046,8 +4102,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -4230,8 +4284,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -4404,8 +4456,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -4573,8 +4623,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -4796,8 +4844,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -5018,8 +5064,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -5196,8 +5240,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -5402,8 +5444,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -5580,8 +5620,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -5753,8 +5791,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -5935,8 +5971,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -6117,8 +6151,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -6306,8 +6338,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -6488,8 +6518,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -6525,7 +6553,7 @@
         "any_submerged"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5,
+      "soil_ph_min": 5.0,
       "soil_ph_max": 7.5,
       "soil_drainage": "saturated_to_submerged",
       "soil_confidence": "verified",
@@ -6697,8 +6725,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -6876,8 +6902,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -7059,8 +7083,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -7240,8 +7262,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -7416,8 +7436,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -7602,8 +7620,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -7637,8 +7653,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5,
-      "soil_ph_max": 8,
+      "soil_ph_min": 5.0,
+      "soil_ph_max": 8.0,
       "soil_drainage": "any",
       "soil_confidence": "verified",
       "florida_zone": [
@@ -7802,8 +7818,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -7980,8 +7994,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8151,8 +8163,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8335,8 +8345,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8372,7 +8380,7 @@
       ],
       "soil_ph_preference": "adaptable to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8,
+      "soil_ph_max": 8.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -8511,8 +8519,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8688,8 +8694,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8726,7 +8730,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8,
+      "soil_ph_max": 8.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -8866,8 +8870,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8891,20 +8893,21 @@
       "community_photo_count": 0,
       "community_photo_limit": 20,
       "water_needs_detail": {
-        "established_frequency": "unknown",
-        "establishment_period_months": null,
-        "tolerates_flooding": null,
-        "tolerates_drought_weeks": null,
-        "dry_season_irrigation": null
+        "established_frequency": "Weekly during dry season — reduce in rainy season",
+        "establishment_period_months": 2,
+        "tolerates_flooding": false,
+        "tolerates_drought_weeks": 20,
+        "dry_season_irrigation": true
       },
       "soil_type": [
+        "sandy",
         "any"
       ],
-      "soil_ph_preference": "unknown",
-      "soil_ph_min": null,
-      "soil_ph_max": null,
-      "soil_drainage": "unknown",
-      "soil_confidence": "unknown",
+      "soil_ph_preference": "slightly_acidic",
+      "soil_ph_min": 6.0,
+      "soil_ph_max": 7.0,
+      "soil_drainage": "well_drained",
+      "soil_confidence": "unverified",
       "florida_zone": [
         "9b",
         "10a",
@@ -8912,45 +8915,48 @@
       ],
       "hurricane_resistance": "unknown",
       "hurricane_confidence": "unknown",
-      "invasive_roots": "unknown",
-      "florida_friendly_approved": null,
-      "growth_annual_inches": "unknown",
-      "growth_notes": "",
-      "growth_confidence": "unknown",
+      "invasive_roots": "non_invasive",
+      "florida_friendly_approved": true,
+      "growth_annual_inches": "72-120",
+      "growth_notes": "Extraordinarily fast — one of the fastest-growing trees on earth. Can add 6-10 feet per year in SW Florida's climate. Regular pruning is essential to keep it productive and manageable.",
+      "growth_confidence": "verified",
       "height_min_ft": null,
       "height_max_ft": null,
-      "spread_min_ft": null,
-      "spread_max_ft": null,
+      "spread_min_ft": 6,
+      "spread_max_ft": 15,
       "can_be_kept_smaller": null,
-      "pruning_notes": "",
+      "pruning_notes": "Prune aggressively and regularly — cut back to 3-4 feet every 2-3 months to maintain a productive bushy form. Left unpruned it becomes a scraggly tree with all growth out of reach. The more you prune the more it produces.",
       "multi_form": [
         "tree"
       ],
       "size_confidence": "unknown",
       "fertilizer_needs": "unknown",
       "easy_to_grow_score": "unknown",
-      "easy_to_grow_notes": "",
-      "beneficial_score": "limited",
-      "beneficial_score_notes": "",
+      "easy_to_grow_notes": "Extremely easy and fast in SW Florida. The main management task is regular pruning to keep it productive. Perfect drainage is non-negotiable — even brief waterlogging can be fatal.",
+      "beneficial_score": "moderate",
+      "beneficial_score_notes": "Good hummingbird and bee nectar source. Excellent edible landscape value. Limited native wildlife value but significant food security value for humans.",
       "best_time_to_plant": [
-        "fall"
+        "april"
       ],
-      "drought_establishment": "unknown",
+      "drought_establishment": "short",
       "propagation_seed": "Not documented for SW Florida",
       "propagation_cutting": "Not documented for SW Florida",
       "propagation_division": "Not documented for SW Florida",
-      "propagation_confidence": "unknown",
+      "propagation_confidence": "verified",
       "germination_method": "Not documented for SW Florida",
       "germination_days": "unknown",
       "stratification": false,
       "germination_notes": "",
-      "germination_confidence": "unknown",
+      "germination_confidence": "verified",
       "transplant_notes": "Not documented for SW Florida",
       "companion_plants": [],
-      "do_not_plant_near": [],
+      "do_not_plant_near": [
+        "Low-lying areas or any spot with poor drainage",
+        "Areas with standing water after rain"
+      ],
       "looks_like_plants": "",
       "looks_like_notes": "",
-      "looks_like_confidence": "unknown",
+      "looks_like_confidence": "unverified",
       "attracts_specific": "",
       "seasonal_care": {
         "january": "Not documented",
@@ -8970,13 +8976,15 @@
       "common_problems": [],
       "where_to_buy_availability": "unknown",
       "where_to_buy_notes": "Not documented",
-      "where_to_buy_local": "Not documented",
-      "where_to_buy_confidence": "unknown",
+      "where_to_buy_local": "Available at some SW Florida nurseries and ethnic grocery stores serving Indian and Caribbean communities",
+      "where_to_buy_confidence": "unverified",
       "expert_tips": "",
       "fun_fact": "",
       "traditional_uses": "",
       "conservation_notes": "",
-      "data_sources": [],
+      "data_sources": [
+        "UF/IFAS"
+      ],
       "last_verified": "2025-06-05",
       "needs_review": true,
       "review_notes": "Awaiting detailed research — fields marked unknown need verification",
@@ -8993,7 +9001,7 @@
       ],
       "has_invasive_lookalike": false,
       "hoa_friendly": "varies",
-      "hoa_notes": "Rapid growth and informal appearance may conflict with HOA aesthetic standards.",
+      "hoa_notes": "HOA approval varies. The fast growth and unusual appearance may require regular maintenance documentation for HOA compliance. Edible landscape framing helps with approval.",
       "pollinator_value": "moderate",
       "where_to_buy": [
         "nursery"
@@ -9007,7 +9015,8 @@
       "cut_flower": false,
       "deer_resistance": "moderate",
       "native_wildflower": false,
-      "fire_resistance": "unknown"
+      "fire_resistance": "unknown",
+      "soil_ph_confidence": "unverified"
     },
     {
       "id": "jacaranda-mimosifolia",
@@ -9036,8 +9045,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9073,7 +9080,7 @@
       ],
       "soil_ph_preference": "slightly acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7,
+      "soil_ph_max": 7.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9219,8 +9226,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9256,7 +9261,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8,
+      "soil_ph_max": 8.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9396,8 +9401,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9581,8 +9584,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9618,7 +9619,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8,
+      "soil_ph_max": 8.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9764,8 +9765,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9938,8 +9937,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -10111,8 +10108,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -10291,8 +10286,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -10463,8 +10456,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -10638,8 +10629,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -10811,8 +10800,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -11025,8 +11012,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -11228,8 +11213,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -11433,8 +11416,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -11641,8 +11622,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -11853,8 +11832,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -12058,8 +12035,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -12232,8 +12207,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -12413,8 +12386,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -12599,8 +12570,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -12779,8 +12748,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -12957,8 +12924,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -13135,8 +13100,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -13310,8 +13273,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -13483,8 +13444,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -13664,8 +13623,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -13848,8 +13805,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -14028,8 +13983,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -14207,8 +14160,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -14386,8 +14337,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -14559,8 +14508,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -14733,8 +14680,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -14916,8 +14861,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -15095,8 +15038,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -15266,8 +15207,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -15447,8 +15386,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -15630,8 +15567,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -15814,8 +15749,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -15995,8 +15928,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -16172,8 +16103,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -16345,8 +16274,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -16521,8 +16448,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -16696,8 +16621,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -16871,8 +16794,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -17045,8 +16966,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -17220,8 +17139,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -17401,8 +17318,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -17575,8 +17490,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -17757,8 +17670,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -17938,8 +17849,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -18115,8 +18024,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -18289,8 +18196,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -18464,8 +18369,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -18639,8 +18542,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -18816,8 +18717,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -18993,8 +18892,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -19167,8 +19064,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -19337,8 +19232,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -19512,8 +19405,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -19687,8 +19578,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -19862,8 +19751,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -20037,8 +19924,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -20214,8 +20099,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -20396,8 +20279,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -20573,8 +20454,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -20749,8 +20628,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -20923,8 +20800,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -21100,8 +20975,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -21278,8 +21151,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -21453,8 +21324,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -21632,8 +21501,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -21807,8 +21674,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -21979,8 +21844,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -22158,8 +22021,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -22335,8 +22196,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -22513,8 +22372,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -22691,8 +22548,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -22867,8 +22722,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -23045,8 +22898,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -23223,8 +23074,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -23400,8 +23249,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -23578,8 +23425,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -23757,8 +23602,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -23938,8 +23781,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -24114,8 +23955,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -24295,8 +24134,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -24332,7 +24169,7 @@
       ],
       "soil_ph_preference": "slightly acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7,
+      "soil_ph_max": 7.0,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -24470,8 +24307,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -24642,8 +24477,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -24815,8 +24648,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -24985,8 +24816,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -25157,8 +24986,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -25327,8 +25154,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -25531,8 +25356,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -25735,8 +25558,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -25952,8 +25773,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26153,8 +25972,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26346,8 +26163,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26515,8 +26330,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26717,8 +26530,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26893,8 +26704,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -27068,8 +26877,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -27251,8 +27058,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -27435,8 +27240,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -27614,8 +27417,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -27795,8 +27596,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -27967,8 +27766,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -28140,8 +27937,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -28315,8 +28110,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -28490,8 +28283,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -28671,8 +28462,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -28846,8 +28635,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -29017,8 +28804,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -29188,8 +28973,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -29362,8 +29145,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -29539,8 +29320,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -29711,8 +29490,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -29890,8 +29667,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -30067,8 +29842,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -30241,8 +30014,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -30416,8 +30187,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -30590,8 +30359,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -30768,8 +30535,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -30941,8 +30706,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -31113,8 +30876,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -31296,8 +31057,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -31470,8 +31229,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -31650,8 +31407,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -31838,8 +31593,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -32016,8 +31769,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -32204,8 +31955,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -32381,8 +32130,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -32557,8 +32304,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -32731,8 +32476,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -32908,8 +32651,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -33082,8 +32823,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -33254,8 +32993,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -33428,8 +33165,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -33601,8 +33336,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -33773,8 +33506,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -33946,8 +33677,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -34117,8 +33846,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -34295,8 +34022,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -34473,8 +34198,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -34647,8 +34370,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -34820,8 +34541,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -34994,8 +34713,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -35167,8 +34884,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -35342,8 +35057,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -35517,8 +35230,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -35691,8 +35402,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -35860,8 +35569,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -36029,8 +35736,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -36204,8 +35909,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -36377,8 +36080,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -36552,8 +36253,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -36726,8 +36425,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -36902,8 +36599,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -37076,8 +36771,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -37257,8 +36950,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -37431,8 +37122,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -37601,8 +37290,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -37773,8 +37460,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -37947,8 +37632,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -38123,8 +37806,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -38296,8 +37977,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -38470,8 +38149,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -38645,8 +38322,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -38821,8 +38496,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -38996,8 +38669,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -39170,8 +38841,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -39343,8 +39012,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -39517,8 +39184,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -39692,8 +39357,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -39866,8 +39529,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -40044,8 +39705,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -40218,8 +39877,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -40391,8 +40048,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -40563,8 +40218,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -40737,8 +40390,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -40911,8 +40562,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -41091,8 +40740,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -41270,8 +40917,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -41444,8 +41089,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -41622,8 +41265,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -41797,8 +41438,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -41974,8 +41613,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -42148,8 +41785,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -42327,8 +41962,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -42502,8 +42135,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -42677,8 +42308,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -42853,8 +42482,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -43030,8 +42657,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -43205,8 +42830,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -43376,8 +42999,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -43545,8 +43166,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -43719,8 +43338,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -43891,8 +43508,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -44066,8 +43681,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -44239,8 +43852,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -44413,8 +44024,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -44587,8 +44196,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -44761,8 +44368,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -44934,8 +44539,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -45105,8 +44708,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -45277,8 +44878,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -45459,8 +45058,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -45639,8 +45236,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -45818,8 +45413,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -45995,8 +45588,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -46171,8 +45762,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -46348,8 +45937,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -46522,8 +46109,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -46696,8 +46281,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -46870,8 +46453,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -47045,8 +46626,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -47218,8 +46797,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -47390,8 +46967,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -47561,8 +47136,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -47740,8 +47313,6 @@
       "images": {
         "primary": "",
         "gallery": [],
-        "captions": [],
-        "photo_credits": [],
         "community": []
       },
       "status": "published",
