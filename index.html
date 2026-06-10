@@ -196,6 +196,30 @@ body{
   z-index:90;
 }
 
+.filter-toggle-btn{
+  display:none;
+  align-items:center;
+  gap:8px;
+  background:transparent;
+  border:1px solid var(--border2);
+  border-radius:var(--radius);
+  color:var(--text2);
+  padding:7px 14px;
+  font-size:13px;
+  font-family:var(--font-body);
+  cursor:pointer;
+  transition:all 0.2s;
+  white-space:nowrap;
+}
+.filter-toggle-btn:hover{border-color:var(--border3);color:var(--green2)}
+.filter-toggle-btn .ft-arrow{transition:transform 0.2s;font-size:10px;}
+.filter-toggle-btn.open .ft-arrow{transform:rotate(180deg)}
+
+.collapsible-filters{
+  overflow:hidden;
+  transition:max-height 0.3s ease;
+}
+
 .search-row{
   padding:12px 24px;
   display:flex;
@@ -598,17 +622,39 @@ body{
 
 .gallery-main{
   width:100%;
-  aspect-ratio:16/7;
+  aspect-ratio:16/9;
   overflow:hidden;
   position:relative;
   background:var(--bg0);
+  cursor:zoom-in;
 }
 
 .gallery-main img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:contain;
+  background:var(--bg0);
 }
+
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.97);
+  z-index:2000;
+  align-items:center;
+  justify-content:center;
+  cursor:zoom-out;
+}
+.lightbox.open{display:flex}
+.lightbox-img{max-width:96vw;max-height:92vh;object-fit:contain;border-radius:4px;cursor:default;}
+.lightbox-close{position:fixed;top:16px;right:16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:18px;line-height:1;transition:background 0.2s;}
+.lightbox-close:hover{background:rgba(255,255,255,0.25)}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:24px;transition:background 0.2s;user-select:none;}
+.lightbox-nav:hover{background:rgba(255,255,255,0.2)}
+.lb-prev{left:12px}.lb-next{right:12px}
+.lightbox-caption{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);font-size:13px;color:rgba(255,255,255,0.55);text-align:center;max-width:600px;padding:0 16px;}
+.lightbox-counter{position:fixed;top:16px;left:50%;transform:translateX(-50%);font-size:12px;color:rgba(255,255,255,0.5);background:rgba(0,0,0,0.5);padding:4px 12px;border-radius:20px;}
 
 .gallery-placeholder{
   width:100%;
@@ -1028,13 +1074,16 @@ body{
   .site-nav{display:none}
   .hero{padding:24px 16px 20px}
   .hero-stats{gap:20px}
-  .search-row,.filters-row,.scenarios-row,.results-bar{padding-left:16px;padding-right:16px}
+  .search-row,.results-bar{padding-left:16px;padding-right:16px}
+  .filters-row,.scenarios-row{padding-left:16px;padding-right:16px}
   .plant-grid{grid-template-columns:1fr}
   .seasonal-grid{grid-template-columns:repeat(2,1fr)}
   .modal{border-radius:var(--radius-lg)}
   .panel{padding:16px}
   .quick-grid{grid-template-columns:repeat(2,1fr)}
   .site-footer{padding:20px 16px}
+  .filter-toggle-btn{display:flex}
+  .collapsible-filters.collapsed{max-height:0 !important}
 }
 
 @media(max-width:400px){
@@ -1088,9 +1137,11 @@ body{
       <span class="search-icon">⌕</span>
       <input class="search-input" id="search" type="text" placeholder="Search plants, wildlife, uses, or characteristics…" autocomplete="off" spellcheck="false">
     </div>
+    <button class="filter-toggle-btn" id="filter-toggle-btn">Filters <span class="ft-arrow">▼</span></button>
     <button class="clear-btn" id="clear-btn">Clear all</button>
   </div>
 
+  <div class="collapsible-filters" id="collapsible-filters">
   <div class="filters-row">
     <span class="filter-label">Filter</span>
     <select class="sd-select" id="f-cat">
@@ -1173,6 +1224,7 @@ body{
     <button class="pill" data-sc="lawn_replacement">Replace my lawn</button>
     <button class="pill" data-sc="pet_safe">Pet safe yard</button>
   </div>
+  </div><!-- end collapsible-filters -->
 </div>
 
 <div class="results-bar">
@@ -1208,11 +1260,21 @@ body{
   </div>
 </div>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lb-close" aria-label="Close lightbox">✕</button>
+  <button class="lightbox-nav lb-prev" id="lb-prev" aria-label="Previous image">‹</button>
+  <img class="lightbox-img" id="lb-img" src="" alt="">
+  <button class="lightbox-nav lb-next" id="lb-next" aria-label="Next image">›</button>
+  <div class="lightbox-counter" id="lb-counter"></div>
+  <div class="lightbox-caption" id="lb-caption"></div>
+</div>
+
 <script>
 (function(){
 'use strict';
 
-const JSON_URL = 'swfl_plants_v3.json';
+const JSON_URL = 'https://steerplasty.github.io/swfl-plant-guide/swfl_plants_v3.json';
 const CLOUDINARY = 'https://res.cloudinary.com/dzgw9vhxm/image/upload/';
 const MONTHS = ['january','february','march','april','may','june','july','august','september','october','november','december'];
 const MONTH_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -1434,21 +1496,30 @@ function updateGallery(idx){
 function bindGalleryEvents(){
   const prev = document.getElementById('gallery-prev');
   const next = document.getElementById('gallery-next');
-  if(prev) prev.addEventListener('click',()=>updateGallery(galleryIndex-1));
-  if(next) next.addEventListener('click',()=>updateGallery(galleryIndex+1));
+  if(prev) prev.addEventListener('click',e=>{ e.stopPropagation(); updateGallery(galleryIndex-1); });
+  if(next) next.addEventListener('click',e=>{ e.stopPropagation(); updateGallery(galleryIndex+1); });
   document.querySelectorAll('.gallery-thumb').forEach(t=>{
     t.addEventListener('click',()=>updateGallery(parseInt(t.dataset.idx)));
   });
+  const mainImg = document.getElementById('gallery-img');
+  const mainEl = document.querySelector('.gallery-main');
+  if(mainEl) mainEl.addEventListener('click',()=>{ if(galleryImages.length) openLightbox(galleryIndex); });
 }
 
 function openModal(id){
   const p = plantMap[id];
   if(!p) return;
 
-  document.getElementById('modal-gallery').outerHTML;
-  document.getElementById('modal').querySelector('.modal-gallery')?.remove();
-
   const galleryHtml = buildGalleryHtml(p);
+  document.getElementById('modal-gallery').innerHTML = '';
+  const galleryEl = document.createElement('div');
+  galleryEl.innerHTML = galleryHtml;
+  const builtGallery = galleryEl.firstElementChild;
+  const mgEl = document.getElementById('modal-gallery');
+  if(builtGallery){
+    while(builtGallery.firstChild) mgEl.appendChild(builtGallery.firstChild);
+  }
+  bindGalleryEvents();
 
   const header = document.getElementById('modal-header');
   header.innerHTML = `
@@ -1456,12 +1527,6 @@ function openModal(id){
     <div class="modal-scientific">${esc(p.scientific_name)}${p.family?` <span>· ${esc(p.family)}</span>`:''}</div>
     <div class="modal-meta">${buildTags(p)}</div>
   `;
-
-  const galleryEl = document.createElement('div');
-  galleryEl.innerHTML = galleryHtml;
-  const modal = document.getElementById('modal');
-  modal.insertBefore(galleryEl.firstElementChild, header);
-  bindGalleryEvents();
 
   const TABS = [
     {id:'overview',label:'Overview'},
@@ -1629,12 +1694,88 @@ document.getElementById('modal-overlay').addEventListener('click',e=>{
 });
 
 document.addEventListener('keydown',e=>{
+  const lb = document.getElementById('lightbox');
+  if(lb.classList.contains('open')){
+    if(e.key==='Escape') closeLightbox();
+    if(e.key==='ArrowLeft') lbNav(-1);
+    if(e.key==='ArrowRight') lbNav(1);
+    return;
+  }
   const overlay = document.getElementById('modal-overlay');
   if(!overlay.classList.contains('open')) return;
   if(e.key==='Escape') overlay.classList.remove('open');
   if(e.key==='ArrowLeft') updateGallery(galleryIndex-1);
   if(e.key==='ArrowRight') updateGallery(galleryIndex+1);
 });
+
+// ── LIGHTBOX ──
+function openLightbox(idx){
+  if(!galleryImages.length) return;
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('open');
+  lbSet(idx);
+}
+
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+function lbSet(idx){
+  idx = Math.max(0,Math.min(idx,galleryImages.length-1));
+  galleryIndex = idx;
+  document.getElementById('lb-img').src = galleryImages[idx];
+  document.getElementById('lb-caption').textContent = galleryCaptions[idx]||'';
+  document.getElementById('lb-counter').textContent = galleryImages.length > 1 ? `${idx+1} / ${galleryImages.length}` : '';
+  document.getElementById('lb-prev').style.display = idx===0?'none':'flex';
+  document.getElementById('lb-next').style.display = idx===galleryImages.length-1?'none':'flex';
+  updateGallery(idx);
+}
+
+function lbNav(dir){ lbSet(galleryIndex+dir); }
+
+document.getElementById('lb-close').addEventListener('click', closeLightbox);
+document.getElementById('lb-prev').addEventListener('click', e=>{ e.stopPropagation(); lbNav(-1); });
+document.getElementById('lb-next').addEventListener('click', e=>{ e.stopPropagation(); lbNav(1); });
+document.getElementById('lightbox').addEventListener('click', e=>{ if(e.target===document.getElementById('lightbox')) closeLightbox(); });
+
+// ── MOBILE FILTER TOGGLE ──
+(function(){
+  const btn = document.getElementById('filter-toggle-btn');
+  const panel = document.getElementById('collapsible-filters');
+  if(!btn||!panel) return;
+
+  function isMobile(){ return window.innerWidth <= 640; }
+
+  function initState(){
+    if(isMobile()){
+      panel.style.maxHeight = '0px';
+      panel.classList.add('collapsed');
+      btn.style.display = 'flex';
+    } else {
+      panel.style.maxHeight = '';
+      panel.classList.remove('collapsed');
+      btn.style.display = 'none';
+    }
+  }
+
+  initState();
+  window.addEventListener('resize', initState);
+
+  btn.addEventListener('click', ()=>{
+    const isCollapsed = panel.classList.contains('collapsed');
+    if(isCollapsed){
+      panel.classList.remove('collapsed');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      btn.classList.add('open');
+      btn.querySelector('.ft-arrow').textContent = '▲';
+    } else {
+      panel.classList.add('collapsed');
+      panel.style.maxHeight = '0px';
+      btn.classList.remove('open');
+      btn.querySelector('.ft-arrow').textContent = '▼';
+    }
+  });
+})();
 
 document.querySelectorAll('.pill').forEach(pill=>{
   pill.addEventListener('click',()=>{
