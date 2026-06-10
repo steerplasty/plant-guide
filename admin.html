@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swamp Druid — Image Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg0:#080f08;--bg1:#0d170d;--bg2:#111d11;--bg3:#162216;--bg4:#1c2b1c;
+  --border:rgba(100,160,60,0.12);--border2:rgba(100,160,60,0.25);--border3:rgba(100,160,60,0.4);
+  --green:#7db84a;--green2:#a0d060;--green3:#c8e898;
+  --gold:#c8a440;--gold2:#e8c060;--teal:#3db898;--red:#d84848;--amber:#d09040;
+  --text:#deecd0;--text2:#8aaa78;--text3:#4a6840;--text4:#2a4020;
+  --font-display:'Cinzel',serif;--font-body:'Inter',sans-serif;
+  --radius:6px;--radius-lg:10px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg0);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased;}
+
+.site-header{background:var(--bg1);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-family:var(--font-display);font-size:16px;color:var(--green2);letter-spacing:0.04em;}
+.logo span{font-size:12px;color:var(--text3);font-family:var(--font-body);margin-left:8px;font-weight:400;}
+.back-link{font-size:13px;color:var(--text3);text-decoration:none;transition:color 0.2s;}
+.back-link:hover{color:var(--green2)}
+
+.main{max-width:900px;margin:0 auto;padding:24px;}
+
+.page-title{font-family:var(--font-display);font-size:22px;color:var(--green3);margin-bottom:4px;}
+.page-sub{font-size:13px;color:var(--text3);margin-bottom:24px;line-height:1.6;}
+
+.step{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:16px;overflow:hidden;}
+.step-header{padding:14px 20px;background:var(--bg3);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;}
+.step-num{width:24px;height:24px;border-radius:50%;background:var(--green);color:#080f08;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-title{font-size:14px;font-weight:600;color:var(--text);}
+.step-sub{font-size:12px;color:var(--text3);margin-left:auto;}
+.step-body{padding:16px 20px;}
+
+.load-row{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;}
+.input-full{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);padding:9px 12px;font-size:13px;font-family:var(--font-body);outline:none;transition:border-color 0.2s;}
+.input-full:focus{border-color:var(--green)}
+.input-full::placeholder{color:var(--text3)}
+textarea.input-full{resize:vertical;min-height:80px;line-height:1.5;}
+
+.btn{background:var(--green);border:none;border-radius:var(--radius);color:#080f08;padding:9px 18px;font-size:13px;font-weight:600;font-family:var(--font-body);cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+.btn:hover{background:var(--green2)}
+.btn:disabled{background:var(--text4);color:var(--text3);cursor:not-allowed;}
+.btn-secondary{background:transparent;border:1px solid var(--border2);color:var(--text2);}
+.btn-secondary:hover{border-color:var(--border3);color:var(--green2);background:transparent;}
+.btn-danger{background:transparent;border:1px solid rgba(216,72,72,0.3);color:var(--red);}
+.btn-danger:hover{background:rgba(216,72,72,0.08);border-color:rgba(216,72,72,0.5);}
+.btn-sm{padding:5px 12px;font-size:12px;}
+
+.status{padding:10px 14px;border-radius:var(--radius);font-size:13px;margin-top:10px;display:none;}
+.status.show{display:block;}
+.status-ok{background:rgba(125,184,74,0.08);border:1px solid rgba(125,184,74,0.2);color:var(--green2);}
+.status-err{background:rgba(216,72,72,0.08);border:1px solid rgba(216,72,72,0.2);color:var(--red);}
+.status-info{background:rgba(61,184,152,0.08);border:1px solid rgba(61,184,152,0.2);color:var(--teal);}
+
+.search-row{display:flex;gap:8px;margin-bottom:12px;}
+.search-wrap{flex:1;position:relative;}
+.search-wrap input{width:100%;padding-left:12px;}
+
+.plant-list{display:flex;flex-direction:column;gap:4px;max-height:300px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
+.plant-item{padding:10px 12px;border-radius:var(--radius);border:1px solid var(--border);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.plant-item:hover{background:var(--bg3);border-color:var(--border2);}
+.plant-item.selected{background:rgba(125,184,74,0.08);border-color:var(--green);}
+.plant-item-names{}
+.plant-item-common{font-size:13px;font-weight:600;color:var(--text);}
+.plant-item-sci{font-size:11px;color:var(--text3);font-style:italic;}
+.plant-item-cat{font-size:11px;color:var(--text4);text-transform:capitalize;white-space:nowrap;}
+.plant-item-img-count{font-size:11px;color:var(--green);background:rgba(125,184,74,0.1);border-radius:3px;padding:2px 7px;white-space:nowrap;}
+.plant-item-img-count.zero{color:var(--text4);background:transparent;}
+
+.selected-plant{background:rgba(125,184,74,0.06);border:1px solid rgba(125,184,74,0.2);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:16px;}
+.selected-plant-name{font-family:var(--font-display);font-size:18px;color:var(--green3);margin-bottom:2px;}
+.selected-plant-sci{font-size:12px;color:var(--text3);font-style:italic;margin-bottom:8px;}
+.selected-plant-meta{display:flex;gap:8px;flex-wrap:wrap;}
+.meta-chip{font-size:11px;color:var(--text3);background:var(--bg3);border:1px solid var(--border);border-radius:3px;padding:2px 8px;text-transform:capitalize;}
+
+.images-section{margin-top:16px;}
+.images-title{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:10px;}
+
+.image-row{display:flex;gap:8px;align-items:center;margin-bottom:6px;padding:8px 10px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);}
+.image-preview{width:48px;height:34px;border-radius:3px;object-fit:cover;background:var(--bg4);flex-shrink:0;}
+.image-preview-placeholder{width:48px;height:34px;border-radius:3px;background:var(--bg4);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.image-url-text{flex:1;font-size:11px;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.image-caption-input{width:180px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);color:var(--text2);padding:4px 8px;font-size:11px;font-family:var(--font-body);outline:none;}
+.image-caption-input:focus{border-color:var(--green)}
+.image-caption-input::placeholder{color:var(--text4)}
+.image-primary-badge{font-size:10px;color:var(--gold);background:rgba(200,164,64,0.1);border:1px solid rgba(200,164,64,0.2);border-radius:3px;padding:2px 6px;white-space:nowrap;flex-shrink:0;}
+
+.add-url-row{display:flex;gap:8px;margin-top:8px;}
+.add-url-input{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);padding:8px 12px;font-size:12px;font-family:var(--font-body);outline:none;transition:border-color 0.2s;}
+.add-url-input:focus{border-color:var(--green)}
+.add-url-input::placeholder{color:var(--text3)}
+
+.no-images{padding:16px;text-align:center;color:var(--text4);font-size:13px;border:1px dashed var(--border);border-radius:var(--radius);}
+
+.output-area{background:var(--bg1);border:1px solid var(--border);border-radius:var(--radius);padding:14px;font-size:11px;color:var(--text3);font-family:monospace;line-height:1.6;white-space:pre-wrap;word-break:break-all;max-height:320px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
+
+.output-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center;}
+.output-info{font-size:12px;color:var(--text3);flex:1;}
+
+.progress-bar-wrap{background:var(--bg3);border-radius:20px;height:6px;overflow:hidden;margin-top:8px;}
+.progress-bar{height:100%;background:var(--green);border-radius:20px;transition:width 0.3s;}
+
+.stats-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:12px 16px;flex:1;min-width:120px;}
+.stat-num{font-family:var(--font-display);font-size:24px;color:var(--green2);line-height:1;}
+.stat-label{font-size:11px;color:var(--text3);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;}
+
+.helper-text{font-size:12px;color:var(--text3);margin-top:6px;line-height:1.6;}
+.helper-text a{color:var(--green2);text-decoration:none;}
+.helper-text a:hover{text-decoration:underline;}
+
+.tag{font-size:10px;padding:2px 7px;border-radius:3px;border:1px solid;}
+.tag-native{color:var(--teal);border-color:rgba(61,184,152,0.3);background:rgba(61,184,152,0.07)}
+.tag-invasive{color:var(--red);border-color:rgba(216,72,72,0.3);background:rgba(216,72,72,0.07)}
+.tag-nonnative{color:var(--text3);border-color:var(--border);background:transparent}
+
+.divider{border:none;border-top:1px solid var(--border);margin:16px 0;}
+
+@media(max-width:640px){
+  .main{padding:16px;}
+  .load-row{flex-direction:column;}
+  .add-url-row{flex-direction:column;}
+  .image-caption-input{width:100%;}
+  .output-actions{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Swamp Druid <span>Image Admin</span></div>
+  <a class="back-link" href="index.html">← Back to plant guide</a>
+</header>
+
+<div class="main">
+  <div class="page-title">Plant Image Manager</div>
+  <p class="page-sub">Add, edit, and manage Cloudinary photo URLs for each plant. Load your JSON, find a plant, add image URLs, then download the updated JSON and push it to GitHub.</p>
+
+  <div class="stats-row" id="stats-row" style="display:none">
+    <div class="stat-card"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Total plants</div></div>
+    <div class="stat-card"><div class="stat-num" id="stat-with-images">0</div><div class="stat-label">Have images</div></div>
+    <div class="stat-card"><div class="stat-num" id="stat-no-images">0</div><div class="stat-label">No images yet</div></div>
+    <div class="stat-card"><div class="stat-num" id="stat-total-images">0</div><div class="stat-label">Total photos</div></div>
+  </div>
+
+  <!-- STEP 1: Load JSON -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">Load your plant database</div>
+      <div class="step-sub">Upload your JSON file from your computer</div>
+    </div>
+    <div class="step-body">
+      <div class="load-row">
+        <input type="file" id="json-file" accept=".json" style="display:none">
+        <button class="btn" onclick="document.getElementById('json-file').click()">Choose JSON file</button>
+        <button class="btn btn-secondary" id="load-live-btn">Load from GitHub (live)</button>
+      </div>
+      <div class="helper-text">Upload <strong>swfl_plants_v3.json</strong> from your computer, or click "Load from GitHub" to fetch the live version directly.</div>
+      <div class="status" id="load-status"></div>
+    </div>
+  </div>
+
+  <!-- STEP 2: Find plant -->
+  <div class="step" id="step2" style="opacity:0.4;pointer-events:none;">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">Find a plant</div>
+      <div class="step-sub" id="step2-sub">Load JSON first</div>
+    </div>
+    <div class="step-body">
+      <div class="search-row">
+        <div class="search-wrap">
+          <input class="input-full" id="plant-search" type="text" placeholder="Search by name, scientific name, or category…" autocomplete="off">
+        </div>
+        <select class="input-full" id="filter-has-images" style="width:180px;flex-shrink:0">
+          <option value="">All plants</option>
+          <option value="no">No images yet</option>
+          <option value="yes">Has images</option>
+        </select>
+      </div>
+      <div class="plant-list" id="plant-list"></div>
+    </div>
+  </div>
+
+  <!-- STEP 3: Add images -->
+  <div class="step" id="step3" style="opacity:0.4;pointer-events:none;">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div class="step-title">Manage images</div>
+      <div class="step-sub" id="step3-sub">Select a plant first</div>
+    </div>
+    <div class="step-body">
+      <div id="selected-plant-display"></div>
+
+      <div class="images-section">
+        <div class="images-title">Current images <span id="img-count-label" style="color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0"></span></div>
+        <div id="images-list"></div>
+
+        <hr class="divider">
+
+        <div class="images-title">Add new image</div>
+        <div class="add-url-row">
+          <input class="add-url-input" id="new-url" type="text" placeholder="Paste Cloudinary URL — https://res.cloudinary.com/dzgw9vhxm/image/upload/…">
+          <input class="add-url-input" id="new-caption" type="text" placeholder="Caption (optional)" style="max-width:220px;">
+          <button class="btn" id="add-img-btn">Add image</button>
+        </div>
+        <div class="helper-text">
+          Get URLs from <a href="https://cloudinary.com/console/media_library" target="_blank">Cloudinary Media Library</a> → click image → copy URL. Max 20 images per plant.
+        </div>
+        <div class="status" id="add-status"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4: Download -->
+  <div class="step" id="step4" style="opacity:0.4;pointer-events:none;">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <div class="step-title">Download updated JSON</div>
+      <div class="step-sub">Then push to GitHub</div>
+    </div>
+    <div class="step-body">
+      <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.6;">
+        When you're done adding images, download the updated JSON and replace <code style="background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:12px">swfl_plants_v3.json</code> in your GitHub repo. Your plant guide will show the new photos automatically.
+      </p>
+
+      <div id="change-summary" style="margin-bottom:12px;"></div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="btn" id="download-btn" disabled>Download swfl_plants_v3.json</button>
+        <button class="btn btn-secondary" id="preview-btn" disabled>Preview changes</button>
+      </div>
+
+      <div id="preview-area" style="display:none;margin-top:12px;">
+        <div class="images-title">JSON preview — changed plants only</div>
+        <div class="output-area" id="output-area"></div>
+        <div class="output-actions">
+          <div class="output-info" id="output-info"></div>
+          <button class="btn btn-secondary btn-sm" id="copy-btn">Copy to clipboard</button>
+        </div>
+      </div>
+
+      <div class="helper-text" style="margin-top:12px;">
+        After downloading: go to <a href="https://github.com/steerplasty/plant-guide" target="_blank">github.com/steerplasty/plant-guide</a> → click <strong>swfl_plants_v3.json</strong> → click the pencil icon → select all → paste → commit.
+        <br>Or drag the downloaded file directly onto the GitHub upload page.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+
+const LIVE_JSON_URL = 'swfl_plants_v3.json';
+const MAX_IMAGES = 20;
+
+let db = null;
+let allPlants = [];
+let plantMap = {};
+let selectedPlant = null;
+let changedPlants = new Set();
+
+function fmt(s){ return s?String(s).replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase()):'Unknown'; }
+function esc(s){ return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'):''; }
+
+function showStatus(id, msg, type){
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.className = `status show status-${type}`;
+}
+
+function hideStatus(id){
+  document.getElementById(id).className = 'status';
+}
+
+function getImages(p){
+  const imgs = p.images || {};
+  return {
+    primary: imgs.primary || '',
+    gallery: Array.isArray(imgs.gallery) ? imgs.gallery.filter(Boolean) : [],
+    captions: Array.isArray(imgs.captions) ? imgs.captions : [],
+    photo_credits: Array.isArray(imgs.photo_credits) ? imgs.photo_credits : [],
+    community: Array.isArray(imgs.community) ? imgs.community : []
+  };
+}
+
+function getAllUrls(p){
+  const imgs = getImages(p);
+  const urls = [];
+  const capts = [];
+  if(imgs.primary){ urls.push(imgs.primary); capts.push(imgs.captions[0]||''); }
+  imgs.gallery.forEach((url,i)=>{ if(url){ urls.push(url); capts.push(imgs.captions[urls.length-1]||''); } });
+  return {urls, capts};
+}
+
+function countImages(p){
+  const {urls} = getAllUrls(p);
+  return urls.length;
+}
+
+function loadData(data){
+  db = data;
+  allPlants = data.plants || [];
+  allPlants.forEach(p => plantMap[p.id] = p);
+
+  const withImages = allPlants.filter(p => countImages(p) > 0).length;
+  const totalImgs = allPlants.reduce((acc,p) => acc + countImages(p), 0);
+
+  document.getElementById('stat-total').textContent = allPlants.length;
+  document.getElementById('stat-with-images').textContent = withImages;
+  document.getElementById('stat-no-images').textContent = allPlants.length - withImages;
+  document.getElementById('stat-total-images').textContent = totalImgs;
+  document.getElementById('stats-row').style.display = 'flex';
+
+  document.getElementById('step2').style.opacity = '1';
+  document.getElementById('step2').style.pointerEvents = 'auto';
+  document.getElementById('step2-sub').textContent = `${allPlants.length} plants loaded`;
+
+  showStatus('load-status', `✓ Loaded ${allPlants.length} plants — ${withImages} have images, ${allPlants.length - withImages} need photos`, 'ok');
+  renderPlantList('', '');
+}
+
+document.getElementById('json-file').addEventListener('change', function(){
+  const file = this.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const data = JSON.parse(e.target.result);
+      loadData(data);
+    } catch(err){
+      showStatus('load-status', 'Error reading JSON file — make sure it is a valid JSON file', 'err');
+    }
+  };
+  reader.readAsText(file);
+});
+
+document.getElementById('load-live-btn').addEventListener('click', function(){
+  showStatus('load-status', 'Fetching from GitHub…', 'info');
+  fetch(LIVE_JSON_URL + '?t=' + Date.now())
+    .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(data => loadData(data))
+    .catch(err => showStatus('load-status', 'Could not fetch live JSON — try uploading the file instead', 'err'));
+});
+
+function renderPlantList(query, filter){
+  const list = document.getElementById('plant-list');
+  let plants = allPlants;
+  const q = query.toLowerCase().trim();
+  if(q) plants = plants.filter(p =>
+    p.common_name.toLowerCase().includes(q) ||
+    p.scientific_name.toLowerCase().includes(q) ||
+    p.category.toLowerCase().includes(q) ||
+    p.id.toLowerCase().includes(q)
+  );
+  if(filter === 'no') plants = plants.filter(p => countImages(p) === 0);
+  if(filter === 'yes') plants = plants.filter(p => countImages(p) > 0);
+  plants = [...plants].sort((a,b) => a.common_name.localeCompare(b.common_name));
+
+  if(!plants.length){
+    list.innerHTML = '<div style="padding:16px;text-align:center;color:var(--text4);font-size:13px;">No plants match your search</div>';
+    return;
+  }
+
+  list.innerHTML = plants.slice(0,80).map(p => {
+    const imgCount = countImages(p);
+    const origin = p.origin==='native'?'native':p.origin==='invasive'?'invasive':'nonnative';
+    return `<div class="plant-item${selectedPlant&&selectedPlant.id===p.id?' selected':''}" data-id="${p.id}">
+      <div class="plant-item-names">
+        <div class="plant-item-common">${esc(p.common_name)}</div>
+        <div class="plant-item-sci">${esc(p.scientific_name)}</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+        <span class="plant-item-cat">${fmt(p.category)}</span>
+        <span class="tag tag-${origin}" style="font-size:10px">${p.origin==='native'?'Native':p.origin==='invasive'?'Invasive':'Non-native'}</span>
+        <span class="plant-item-img-count${imgCount===0?' zero':''}">${imgCount===0?'No photos':`${imgCount} photo${imgCount===1?'':'s'}`}</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  if(plants.length > 80){
+    list.innerHTML += `<div style="padding:10px;text-align:center;color:var(--text4);font-size:12px;">Showing first 80 results — refine your search to see more</div>`;
+  }
+
+  list.querySelectorAll('.plant-item').forEach(item => {
+    item.addEventListener('click', () => selectPlant(item.dataset.id));
+  });
+}
+
+document.getElementById('plant-search').addEventListener('input', function(){
+  renderPlantList(this.value, document.getElementById('filter-has-images').value);
+});
+
+document.getElementById('filter-has-images').addEventListener('change', function(){
+  renderPlantList(document.getElementById('plant-search').value, this.value);
+});
+
+function selectPlant(id){
+  selectedPlant = plantMap[id];
+  if(!selectedPlant) return;
+
+  document.querySelectorAll('.plant-item').forEach(item => {
+    item.classList.toggle('selected', item.dataset.id === id);
+  });
+
+  document.getElementById('step3').style.opacity = '1';
+  document.getElementById('step3').style.pointerEvents = 'auto';
+  document.getElementById('step3-sub').textContent = selectedPlant.common_name;
+
+  renderSelectedPlant();
+  renderImagesList();
+  hideStatus('add-status');
+}
+
+function renderSelectedPlant(){
+  const p = selectedPlant;
+  const origin = p.origin==='native'?'native':p.origin==='invasive'?'invasive':'nonnative';
+  document.getElementById('selected-plant-display').innerHTML = `
+    <div class="selected-plant">
+      <div class="selected-plant-name">${esc(p.common_name)}</div>
+      <div class="selected-plant-sci">${esc(p.scientific_name)}</div>
+      <div class="selected-plant-meta">
+        <span class="meta-chip">${fmt(p.category)}</span>
+        <span class="tag tag-${origin}">${p.origin==='native'?'Native':p.origin==='invasive'?'Invasive':'Non-native'}</span>
+        ${p.plant_tier?`<span class="meta-chip">${fmt(p.plant_tier)}</span>`:''}
+        ${p.family?`<span class="meta-chip">${esc(p.family)}</span>`:''}
+      </div>
+    </div>
+  `;
+}
+
+function renderImagesList(){
+  const p = selectedPlant;
+  const imgs = getImages(p);
+  const allUrls = [];
+  const allCapts = [];
+
+  if(imgs.primary){ allUrls.push({url:imgs.primary, type:'primary', idx:0}); allCapts.push(imgs.captions[0]||''); }
+  imgs.gallery.forEach((url,i) => { if(url){ allUrls.push({url, type:'gallery', idx:i}); allCapts.push(imgs.captions[allUrls.length-1]||''); } });
+
+  const count = allUrls.length;
+  document.getElementById('img-count-label').textContent = `(${count} / ${MAX_IMAGES} max)`;
+
+  const list = document.getElementById('images-list');
+  if(!allUrls.length){
+    list.innerHTML = `<div class="no-images">No images yet for this plant — add the first one below</div>`;
+  } else {
+    list.innerHTML = allUrls.map((item, i) => `
+      <div class="image-row" id="imgrow-${i}">
+        <img class="image-preview" src="${esc(item.url)}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-preview-placeholder" style="display:none;">🖼</div>
+        ${item.type==='primary'?'<span class="image-primary-badge">Primary</span>':''}
+        <div class="image-url-text" title="${esc(item.url)}">${esc(item.url.split('/').pop())}</div>
+        <input class="image-caption-input" placeholder="Add caption…" value="${esc(allCapts[i]||'')}" data-imgidx="${i}" data-url="${esc(item.url)}">
+        <button class="btn btn-danger btn-sm" data-remove="${i}" data-url="${esc(item.url)}">Remove</button>
+        ${i>0?`<button class="btn btn-secondary btn-sm" data-primary="${i}" data-url="${esc(item.url)}" title="Set as primary photo">★ Primary</button>`:''}
+      </div>
+    `).join('');
+
+    list.querySelectorAll('[data-remove]').forEach(btn => {
+      btn.addEventListener('click', () => removeImage(btn.dataset.url));
+    });
+
+    list.querySelectorAll('[data-primary]').forEach(btn => {
+      btn.addEventListener('click', () => setAsPrimary(btn.dataset.url));
+    });
+
+    list.querySelectorAll('.image-caption-input').forEach(input => {
+      input.addEventListener('change', () => updateCaption(input.dataset.url, input.value));
+    });
+  }
+
+  const addBtn = document.getElementById('add-img-btn');
+  addBtn.disabled = count >= MAX_IMAGES;
+  if(count >= MAX_IMAGES) addBtn.title = 'Maximum 20 images reached';
+}
+
+function removeImage(url){
+  const p = selectedPlant;
+  const imgs = getImages(p);
+  if(imgs.primary === url){
+    imgs.primary = imgs.gallery.length ? imgs.gallery.shift() : '';
+    if(imgs.captions.length) imgs.captions.shift();
+  } else {
+    const idx = imgs.gallery.indexOf(url);
+    if(idx > -1){
+      imgs.gallery.splice(idx, 1);
+      imgs.captions.splice(idx+1, 1);
+    }
+  }
+  p.images = imgs;
+  changedPlants.add(p.id);
+  updateStats();
+  renderImagesList();
+  renderPlantList(document.getElementById('plant-search').value, document.getElementById('filter-has-images').value);
+  enableDownload();
+}
+
+function setAsPrimary(url){
+  const p = selectedPlant;
+  const imgs = getImages(p);
+  const idx = imgs.gallery.indexOf(url);
+  if(idx > -1){
+    imgs.gallery.splice(idx, 1);
+    const oldPrimary = imgs.primary;
+    imgs.primary = url;
+    if(oldPrimary) imgs.gallery.unshift(oldPrimary);
+  }
+  p.images = imgs;
+  changedPlants.add(p.id);
+  renderImagesList();
+  enableDownload();
+}
+
+function updateCaption(url, caption){
+  const p = selectedPlant;
+  const imgs = getImages(p);
+  const allUrls = [];
+  if(imgs.primary) allUrls.push(imgs.primary);
+  imgs.gallery.forEach(u => { if(u) allUrls.push(u); });
+  const idx = allUrls.indexOf(url);
+  if(idx > -1){
+    while(imgs.captions.length <= idx) imgs.captions.push('');
+    imgs.captions[idx] = caption;
+  }
+  p.images = imgs;
+  changedPlants.add(p.id);
+  enableDownload();
+}
+
+document.getElementById('add-img-btn').addEventListener('click', function(){
+  const urlInput = document.getElementById('new-url');
+  const captInput = document.getElementById('new-caption');
+  const url = urlInput.value.trim();
+  const caption = captInput.value.trim();
+
+  if(!url){ showStatus('add-status','Please paste a Cloudinary URL first','err'); return; }
+  if(!url.startsWith('http')){ showStatus('add-status','URL must start with https://','err'); return; }
+
+  const p = selectedPlant;
+  const imgs = getImages(p);
+  const {urls} = getAllUrls(p);
+
+  if(urls.includes(url)){ showStatus('add-status','This URL is already added to this plant','err'); return; }
+  if(urls.length >= MAX_IMAGES){ showStatus('add-status',`Maximum ${MAX_IMAGES} images per plant reached`,'err'); return; }
+
+  if(!imgs.primary){
+    imgs.primary = url;
+    imgs.captions[0] = caption;
+  } else {
+    imgs.gallery.push(url);
+    while(imgs.captions.length < 1 + imgs.gallery.length) imgs.captions.push('');
+    imgs.captions[imgs.gallery.length] = caption;
+  }
+
+  p.images = imgs;
+  changedPlants.add(p.id);
+  urlInput.value = '';
+  captInput.value = '';
+  updateStats();
+  renderImagesList();
+  renderPlantList(document.getElementById('plant-search').value, document.getElementById('filter-has-images').value);
+  enableDownload();
+  showStatus('add-status', `✓ Image added — ${getAllUrls(p).urls.length} / ${MAX_IMAGES} photos for ${p.common_name}`, 'ok');
+});
+
+document.getElementById('new-url').addEventListener('keydown', function(e){
+  if(e.key === 'Enter') document.getElementById('add-img-btn').click();
+});
+
+function updateStats(){
+  const withImages = allPlants.filter(p => countImages(p) > 0).length;
+  const totalImgs = allPlants.reduce((acc,p) => acc + countImages(p), 0);
+  document.getElementById('stat-with-images').textContent = withImages;
+  document.getElementById('stat-no-images').textContent = allPlants.length - withImages;
+  document.getElementById('stat-total-images').textContent = totalImgs;
+}
+
+function enableDownload(){
+  document.getElementById('step4').style.opacity = '1';
+  document.getElementById('step4').style.pointerEvents = 'auto';
+  document.getElementById('download-btn').disabled = false;
+  document.getElementById('preview-btn').disabled = false;
+
+  const summary = document.getElementById('change-summary');
+  summary.innerHTML = `<div class="status show status-info">${changedPlants.size} plant${changedPlants.size===1?'':'s'} modified in this session: ${[...changedPlants].map(id => plantMap[id]?.common_name || id).join(', ')}</div>`;
+}
+
+document.getElementById('download-btn').addEventListener('click', function(){
+  if(!db) return;
+  db.metadata.last_updated = new Date().toISOString().split('T')[0];
+  const blob = new Blob([JSON.stringify(db, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'swfl_plants_v3.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+document.getElementById('preview-btn').addEventListener('click', function(){
+  const area = document.getElementById('preview-area');
+  const output = document.getElementById('output-area');
+  const info = document.getElementById('output-info');
+
+  if(!changedPlants.size){
+    output.textContent = 'No changes made yet.';
+    area.style.display = 'block';
+    return;
+  }
+
+  const preview = {};
+  changedPlants.forEach(id => {
+    const p = plantMap[id];
+    if(p) preview[id] = { images: p.images };
+  });
+
+  output.textContent = JSON.stringify(preview, null, 2);
+  info.textContent = `${changedPlants.size} plant${changedPlants.size===1?'':'s'} changed`;
+  area.style.display = 'block';
+});
+
+document.getElementById('copy-btn').addEventListener('click', function(){
+  const text = document.getElementById('output-area').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    this.textContent = '✓ Copied';
+    setTimeout(()=>{ this.textContent = 'Copy to clipboard'; }, 2000);
+  });
+});
+
+})();
+</script>
+</body>
+</html>
