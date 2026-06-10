@@ -202,9 +202,11 @@
       "description": "The single most ecologically important tree you can plant in SW Florida. Supports hundreds of caterpillar and moth species — critical food for nesting birds. Acorns feed squirrels, deer, turkeys, blue jays, and woodpeckers year-round. Massive spreading canopy provides prime nesting sites for eagles, owls, and songbirds. Long-lived, hurricane resistant, and deeply beautiful. Give it significant room — it spreads as wide as it is tall.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781053113/PXL_20250717_185128391_csxxxk.jpg",
         "gallery": [],
-        "captions": [],
+        "captions": [
+          ""
+        ],
         "photo_credits": [],
         "community": []
       },
@@ -980,7 +982,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_moderate",
       "soil_confidence": "unverified",
@@ -1169,7 +1171,7 @@
         "any"
       ],
       "soil_ph_preference": "slightly acidic to neutral",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unverified",
@@ -2258,7 +2260,7 @@
         "rocky"
       ],
       "soil_ph_preference": "adaptable to alkaline",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "verified",
@@ -2449,7 +2451,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -2827,8 +2829,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -6523,7 +6525,7 @@
         "any_submerged"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "saturated_to_submerged",
       "soil_confidence": "verified",
@@ -7635,8 +7637,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "any",
       "soil_confidence": "verified",
       "florida_zone": [
@@ -8370,7 +8372,7 @@
       ],
       "soil_ph_preference": "adaptable to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -8724,7 +8726,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9071,7 +9073,7 @@
       ],
       "soil_ph_preference": "slightly acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9254,7 +9256,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9616,7 +9618,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -24330,7 +24332,7 @@
       ],
       "soil_ph_preference": "slightly acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
