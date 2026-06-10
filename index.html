@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swamp Druid — SW Florida Plant Guide</title>
+<meta name="description" content="The most detailed plant guide for Southwest Florida. 267 plants covering Lee, Collier, Charlotte, Hendry, and Glades counties. Native plants, care guides, wildlife value, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg0:#080f08;
+  --bg1:#0d170d;
+  --bg2:#111d11;
+  --bg3:#162216;
+  --bg4:#1c2b1c;
+  --card:#132013;
+  --card-hover:#182818;
+  --border:rgba(100,160,60,0.12);
+  --border2:rgba(100,160,60,0.25);
+  --border3:rgba(100,160,60,0.4);
+  --green:#7db84a;
+  --green2:#a0d060;
+  --green3:#c8e898;
+  --gold:#c8a440;
+  --gold2:#e8c060;
+  --teal:#3db898;
+  --teal2:#60d8b8;
+  --red:#d84848;
+  --amber:#d09040;
+  --blue:#4898d8;
+  --text:#deecd0;
+  --text2:#8aaa78;
+  --text3:#4a6840;
+  --text4:#2a4020;
+  --font-display:'Cinzel',serif;
+  --font-body:'Inter',sans-serif;
+  --radius:6px;
+  --radius-lg:10px;
+  --radius-xl:16px;
+  --shadow:0 4px 24px rgba(0,0,0,0.6);
+  --shadow-lg:0 8px 48px rgba(0,0,0,0.8);
+}
+
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:var(--bg0);
+  color:var(--text);
+  min-height:100vh;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── SITE HEADER ── */
+.site-header{
+  background:var(--bg1);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:56px;
+  gap:16px;
+}
+
+.site-logo{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  text-decoration:none;
+  flex-shrink:0;
+}
+
+.logo-druid{
+  font-family:var(--font-display);
+  font-size:18px;
+  font-weight:600;
+  color:var(--green2);
+  letter-spacing:0.04em;
+  line-height:1;
+}
+
+.logo-sub{
+  font-size:11px;
+  color:var(--text3);
+  font-weight:400;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+
+.site-nav{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.site-nav a{
+  color:var(--text3);
+  text-decoration:none;
+  font-size:13px;
+  padding:6px 12px;
+  border-radius:var(--radius);
+  transition:all 0.2s;
+  letter-spacing:0.02em;
+}
+
+.site-nav a:hover{color:var(--text2)}
+.site-nav a.active{color:var(--green2);background:rgba(100,160,60,0.08)}
+
+.site-nav-region{
+  font-size:11px;
+  color:var(--text4);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:4px 12px;
+  margin-left:8px;
+  letter-spacing:0.04em;
+}
+
+/* ── HERO ── */
+.hero{
+  background:var(--bg1);
+  border-bottom:1px solid var(--border);
+  padding:32px 24px 24px;
+  text-align:center;
+}
+
+.hero-eyebrow{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--green);
+  margin-bottom:12px;
+}
+
+.hero-title{
+  font-family:var(--font-display);
+  font-size:clamp(24px,4vw,42px);
+  font-weight:400;
+  color:var(--green3);
+  letter-spacing:0.03em;
+  line-height:1.2;
+  margin-bottom:8px;
+}
+
+.hero-title em{
+  font-style:normal;
+  color:var(--gold2);
+}
+
+.hero-desc{
+  font-size:14px;
+  color:var(--text2);
+  max-width:560px;
+  margin:0 auto 20px;
+  line-height:1.7;
+}
+
+.hero-stats{
+  display:flex;
+  justify-content:center;
+  gap:32px;
+  flex-wrap:wrap;
+}
+
+.hero-stat-num{
+  font-family:var(--font-display);
+  font-size:24px;
+  font-weight:600;
+  color:var(--green2);
+  line-height:1;
+}
+
+.hero-stat-label{
+  font-size:11px;
+  color:var(--text3);
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  margin-top:3px;
+}
+
+/* ── SEARCH + FILTERS ── */
+.controls{
+  background:var(--bg2);
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:56px;
+  z-index:90;
+}
+
+.search-row{
+  padding:12px 24px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.search-wrap{
+  flex:1;
+  position:relative;
+}
+
+.search-icon{
+  position:absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--text3);
+  font-size:15px;
+  pointer-events:none;
+}
+
+.search-input{
+  width:100%;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  color:var(--text);
+  padding:9px 12px 9px 36px;
+  font-size:14px;
+  font-family:var(--font-body);
+  outline:none;
+  transition:border-color 0.2s;
+}
+
+.search-input:focus{border-color:var(--green)}
+.search-input::placeholder{color:var(--text3)}
+
+.clear-btn{
+  background:transparent;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  color:var(--text3);
+  padding:9px 16px;
+  font-size:13px;
+  font-family:var(--font-body);
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all 0.2s;
+}
+
+.clear-btn:hover{border-color:var(--border2);color:var(--text2)}
+
+.filters-row{
+  padding:0 24px 10px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.filter-label{
+  font-size:11px;
+  color:var(--text4);
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  white-space:nowrap;
+  padding:2px 0;
+}
+
+.sd-select{
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  color:var(--text2);
+  padding:6px 10px;
+  font-size:12px;
+  font-family:var(--font-body);
+  outline:none;
+  cursor:pointer;
+  transition:border-color 0.2s;
+  appearance:none;
+  padding-right:24px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%234a6840'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 8px center;
+}
+
+.sd-select:focus{border-color:var(--green)}
+.sd-select option{background:var(--bg3);color:var(--text)}
+
+.scenarios-row{
+  padding:0 24px 12px;
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.pill{
+  background:transparent;
+  border:1px solid var(--border);
+  border-radius:20px;
+  color:var(--text3);
+  padding:5px 13px;
+  font-size:12px;
+  font-family:var(--font-body);
+  cursor:pointer;
+  transition:all 0.2s;
+  white-space:nowrap;
+  line-height:1.4;
+}
+
+.pill:hover{border-color:var(--border2);color:var(--text2)}
+.pill.active{background:var(--green);border-color:var(--green);color:#080f08;font-weight:600}
+
+/* ── RESULTS BAR ── */
+.results-bar{
+  padding:8px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--border);
+  background:var(--bg0);
+}
+
+.results-count{font-size:12px;color:var(--text3)}
+.results-count strong{color:var(--green2);font-weight:600}
+
+.sort-select{
+  background:transparent;
+  border:none;
+  color:var(--text3);
+  font-size:12px;
+  font-family:var(--font-body);
+  outline:none;
+  cursor:pointer;
+}
+
+.sort-select option{background:var(--bg3)}
+
+/* ── GRID ── */
+.plant-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:1px;
+  background:var(--border);
+}
+
+.plant-card{
+  background:var(--bg0);
+  cursor:pointer;
+  transition:background 0.15s;
+  display:flex;
+  flex-direction:column;
+}
+
+.plant-card:hover{background:var(--card-hover)}
+
+.card-image{
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:var(--bg3);
+  position:relative;
+  flex-shrink:0;
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.3s;
+}
+
+.plant-card:hover .card-image img{transform:scale(1.04)}
+
+.card-placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:var(--bg3);
+}
+
+.placeholder-glyph{
+  font-family:var(--font-display);
+  font-size:32px;
+  color:var(--text4);
+  line-height:1;
+}
+
+.placeholder-label{
+  font-size:10px;
+  color:var(--text4);
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+
+.card-tier-ribbon{
+  position:absolute;
+  top:8px;
+  left:8px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:3px;
+}
+
+.ribbon-keystone{background:rgba(200,164,64,0.9);color:#080f08}
+.ribbon-standard{background:rgba(125,184,74,0.85);color:#080f08}
+.ribbon-reference{background:rgba(40,50,40,0.85);color:var(--text3);border:1px solid var(--border)}
+
+.card-origin-dot{
+  position:absolute;
+  top:8px;
+  right:8px;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+}
+
+.dot-native{background:var(--teal)}
+.dot-invasive{background:var(--red)}
+.dot-nonnative{background:var(--text3)}
+
+.card-body{
+  padding:14px 16px 12px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.card-names{}
+.card-common{
+  font-size:15px;
+  font-weight:600;
+  color:var(--text);
+  line-height:1.3;
+  margin-bottom:2px;
+}
+
+.card-scientific{
+  font-size:12px;
+  color:var(--text3);
+  font-style:italic;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.card-desc{
+  font-size:12px;
+  color:var(--text2);
+  line-height:1.55;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  flex:1;
+}
+
+.card-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+}
+
+.tag{
+  font-size:10px;
+  padding:2px 7px;
+  border-radius:3px;
+  border:1px solid;
+  line-height:1.5;
+}
+
+.tag-native{color:var(--teal);border-color:rgba(61,184,152,0.3);background:rgba(61,184,152,0.07)}
+.tag-invasive{color:var(--red);border-color:rgba(216,72,72,0.3);background:rgba(216,72,72,0.07)}
+.tag-nonnative{color:var(--text3);border-color:var(--border);background:transparent}
+.tag-drought{color:var(--amber);border-color:rgba(208,144,64,0.3);background:rgba(208,144,64,0.07)}
+.tag-water{color:var(--blue);border-color:rgba(72,152,216,0.3);background:rgba(72,152,216,0.07)}
+.tag-edible{color:#80d060;border-color:rgba(128,208,96,0.3);background:rgba(128,208,96,0.07)}
+.tag-toxic{color:var(--red);border-color:rgba(216,72,72,0.3);background:rgba(216,72,72,0.07)}
+.tag-salt{color:var(--teal);border-color:rgba(61,184,152,0.2);background:transparent}
+.tag-keystone{color:var(--gold);border-color:rgba(200,164,64,0.3);background:rgba(200,164,64,0.06)}
+.tag-pet-safe{color:#80d060;border-color:rgba(128,208,96,0.25);background:transparent}
+.tag-pet-toxic{color:var(--red);border-color:rgba(216,72,72,0.25);background:transparent}
+
+.card-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:8px;
+  border-top:1px solid var(--border);
+  margin-top:auto;
+}
+
+.wildlife-row{
+  display:flex;
+  gap:4px;
+  font-size:13px;
+}
+
+.cat-label{
+  font-size:11px;
+  color:var(--text4);
+  text-transform:capitalize;
+  letter-spacing:0.04em;
+}
+
+.no-results{
+  grid-column:1/-1;
+  padding:80px 24px;
+  text-align:center;
+}
+
+.no-results-title{
+  font-family:var(--font-display);
+  font-size:20px;
+  color:var(--text2);
+  margin-bottom:8px;
+}
+
+.no-results-sub{font-size:13px;color:var(--text3)}
+
+.loading-state{
+  padding:80px 24px;
+  text-align:center;
+  color:var(--text3);
+  font-size:14px;
+}
+
+.loading-title{
+  font-family:var(--font-display);
+  font-size:18px;
+  color:var(--text2);
+  margin-bottom:8px;
+}
+
+/* ── MODAL ── */
+.modal-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.92);
+  z-index:1000;
+  overflow-y:auto;
+  padding:20px 16px 40px;
+}
+
+.modal-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+
+.modal{
+  background:var(--bg2);
+  border:1px solid var(--border2);
+  border-radius:var(--radius-xl);
+  width:100%;
+  max-width:780px;
+  box-shadow:var(--shadow-lg);
+  overflow:hidden;
+  position:relative;
+}
+
+.modal-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  z-index:10;
+  background:rgba(8,15,8,0.8);
+  border:1px solid var(--border2);
+  border-radius:50%;
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:var(--text2);
+  font-size:16px;
+  line-height:1;
+  transition:all 0.2s;
+  backdrop-filter:blur(4px);
+}
+
+.modal-close:hover{border-color:var(--border3);color:var(--green2)}
+
+/* Gallery */
+.modal-gallery{
+  background:var(--bg1);
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+
+.gallery-main{
+  width:100%;
+  aspect-ratio:16/7;
+  overflow:hidden;
+  position:relative;
+  background:var(--bg0);
+}
+
+.gallery-main img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.gallery-placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:var(--bg1);
+}
+
+.gallery-placeholder-glyph{
+  font-family:var(--font-display);
+  font-size:56px;
+  color:var(--text4);
+  line-height:1;
+}
+
+.gallery-placeholder-name{
+  font-family:var(--font-display);
+  font-size:14px;
+  color:var(--text3);
+  letter-spacing:0.06em;
+}
+
+.gallery-placeholder-hint{
+  font-size:11px;
+  color:var(--text4);
+  letter-spacing:0.06em;
+}
+
+.gallery-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.6);
+  border:1px solid var(--border2);
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:var(--text2);
+  font-size:18px;
+  transition:all 0.2s;
+  backdrop-filter:blur(4px);
+  user-select:none;
+}
+
+.gallery-nav:hover{background:rgba(0,0,0,0.85);border-color:var(--border3);color:var(--green2)}
+.gallery-nav.prev{left:10px}
+.gallery-nav.next{right:10px}
+.gallery-nav.hidden{display:none}
+
+.gallery-caption{
+  padding:8px 16px;
+  font-size:12px;
+  color:var(--text3);
+  font-style:italic;
+  min-height:30px;
+  text-align:center;
+}
+
+.gallery-counter{
+  position:absolute;
+  bottom:38px;
+  right:12px;
+  background:rgba(0,0,0,0.7);
+  border-radius:20px;
+  padding:3px 10px;
+  font-size:11px;
+  color:var(--text2);
+  backdrop-filter:blur(4px);
+}
+
+.gallery-thumbs{
+  display:flex;
+  gap:4px;
+  padding:8px 16px;
+  overflow-x:auto;
+  scrollbar-width:thin;
+  scrollbar-color:var(--border) transparent;
+}
+
+.gallery-thumb{
+  width:56px;
+  height:40px;
+  border-radius:4px;
+  overflow:hidden;
+  cursor:pointer;
+  border:2px solid transparent;
+  flex-shrink:0;
+  transition:border-color 0.2s;
+  background:var(--bg3);
+}
+
+.gallery-thumb img{width:100%;height:100%;object-fit:cover}
+.gallery-thumb.active{border-color:var(--green)}
+
+.gallery-upload-hint{
+  padding:6px 16px 10px;
+  font-size:11px;
+  color:var(--text4);
+  text-align:center;
+  letter-spacing:0.04em;
+}
+
+/* Modal header */
+.modal-header{
+  background:var(--bg3);
+  padding:18px 48px 16px 20px;
+  border-bottom:1px solid var(--border);
+}
+
+.modal-common{
+  font-family:var(--font-display);
+  font-size:22px;
+  font-weight:400;
+  color:var(--green3);
+  letter-spacing:0.03em;
+  margin-bottom:3px;
+}
+
+.modal-scientific{
+  font-size:13px;
+  color:var(--text3);
+  font-style:italic;
+  margin-bottom:10px;
+}
+
+.modal-scientific span{font-style:normal;color:var(--text4)}
+
+.modal-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+}
+
+/* Modal tabs */
+.modal-tabs{
+  display:flex;
+  background:var(--bg2);
+  border-bottom:1px solid var(--border);
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.modal-tabs::-webkit-scrollbar{display:none}
+
+.tab{
+  padding:11px 16px;
+  font-size:11px;
+  font-weight:600;
+  color:var(--text3);
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+  white-space:nowrap;
+  transition:all 0.15s;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  font-family:var(--font-body);
+}
+
+.tab:hover{color:var(--text2)}
+.tab.active{color:var(--green2);border-bottom-color:var(--green)}
+
+/* Modal content panels */
+.panel{display:none;padding:20px;animation:fadeIn 0.2s ease}
+.panel.active{display:block}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+.section{margin-bottom:20px}
+.section:last-child{margin-bottom:0}
+
+.section-title{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--green);
+  margin-bottom:10px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--border);
+}
+
+.desc-block{
+  font-size:13px;
+  color:var(--text2);
+  line-height:1.75;
+  border-left:2px solid var(--green);
+  padding-left:14px;
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:6px;
+}
+
+.qs{
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:8px 10px;
+}
+
+.qs-label{font-size:10px;color:var(--text3);margin-bottom:3px;text-transform:capitalize}
+.qs-val{font-size:13px;font-weight:600;color:var(--text);text-transform:capitalize}
+
+.tip-box{
+  background:rgba(125,184,74,0.06);
+  border:1px solid rgba(125,184,74,0.18);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  font-size:13px;
+  color:var(--text2);
+  line-height:1.7;
+}
+
+.tip-box strong{color:var(--green2);font-weight:600}
+
+.fact-box{
+  background:rgba(200,164,64,0.06);
+  border:1px solid rgba(200,164,64,0.18);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  font-size:13px;
+  color:var(--text2);
+  line-height:1.7;
+  font-style:italic;
+}
+
+.fact-box::before{
+  content:'✦ ';
+  color:var(--gold);
+  font-style:normal;
+}
+
+.warn-box{
+  background:rgba(208,144,64,0.06);
+  border:1px solid rgba(208,144,64,0.2);
+  border-radius:var(--radius);
+  padding:10px 14px;
+  font-size:13px;
+  color:var(--amber);
+  line-height:1.6;
+  margin-bottom:6px;
+}
+
+.warn-box::before{content:'⚠ ';font-style:normal}
+
+.text-block{
+  font-size:13px;
+  color:var(--text2);
+  line-height:1.75;
+}
+
+.seasonal-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+}
+
+.month-card{
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:8px 10px;
+}
+
+.month-name{
+  font-size:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:var(--green);
+  margin-bottom:5px;
+}
+
+.month-text{
+  font-size:11px;
+  color:var(--text2);
+  line-height:1.55;
+}
+
+.prop-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+  gap:6px;
+}
+
+.prop-card{
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:10px 12px;
+}
+
+.prop-label{
+  font-size:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:var(--green);
+  margin-bottom:5px;
+}
+
+.prop-text{font-size:12px;color:var(--text2);line-height:1.6}
+
+.problem-card{
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:10px 12px;
+  margin-bottom:6px;
+}
+
+.problem-name{
+  font-size:13px;
+  font-weight:600;
+  color:var(--red);
+  margin-bottom:6px;
+}
+
+.problem-row{
+  font-size:12px;
+  color:var(--text2);
+  margin-bottom:4px;
+  line-height:1.55;
+}
+
+.problem-row em{
+  font-style:normal;
+  color:var(--text3);
+  font-weight:600;
+}
+
+.problem-confidence{
+  font-size:10px;
+  color:var(--text4);
+  margin-top:5px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+}
+
+.lookalike-box{
+  background:rgba(216,72,72,0.06);
+  border:1px solid rgba(216,72,72,0.2);
+  border-radius:var(--radius);
+  padding:12px 14px;
+}
+
+.lookalike-title{
+  font-size:11px;
+  font-weight:700;
+  color:var(--red);
+  margin-bottom:6px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+}
+
+.lookalike-text{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:5px}
+
+.companions-wrap{display:flex;flex-wrap:wrap;gap:5px}
+
+.companion-chip{
+  background:rgba(61,184,152,0.07);
+  border:1px solid rgba(61,184,152,0.2);
+  border-radius:4px;
+  padding:4px 10px;
+  font-size:12px;
+  color:var(--teal2);
+  cursor:pointer;
+  transition:all 0.2s;
+}
+
+.companion-chip:hover{background:rgba(61,184,152,0.15)}
+
+.wildlife-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+
+.wildlife-tag{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:4px 10px;
+  font-size:12px;
+  color:var(--text2);
+}
+
+/* ── FOOTER ── */
+.site-footer{
+  background:var(--bg1);
+  border-top:1px solid var(--border);
+  padding:24px;
+  text-align:center;
+  margin-top:1px;
+}
+
+.footer-brand{
+  font-family:var(--font-display);
+  font-size:14px;
+  color:var(--text3);
+  margin-bottom:4px;
+}
+
+.footer-sub{font-size:11px;color:var(--text4)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .site-nav{display:none}
+  .hero{padding:24px 16px 20px}
+  .hero-stats{gap:20px}
+  .search-row,.filters-row,.scenarios-row,.results-bar{padding-left:16px;padding-right:16px}
+  .plant-grid{grid-template-columns:1fr}
+  .seasonal-grid{grid-template-columns:repeat(2,1fr)}
+  .modal{border-radius:var(--radius-lg)}
+  .panel{padding:16px}
+  .quick-grid{grid-template-columns:repeat(2,1fr)}
+  .site-footer{padding:20px 16px}
+}
+
+@media(max-width:400px){
+  .hero-title{font-size:22px}
+  .hero-stats{gap:16px}
+  .hero-stat-num{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="site-logo" href="#">
+    <span class="logo-druid">Swamp Druid</span>
+    <span class="logo-sub">Plant Guide</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#" class="active">Plant Guide</a>
+    <a href="https://swampdruid.com" target="_blank">Main Site</a>
+    <span class="site-nav-region">SW Florida · Zones 9b–11</span>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">Southwest Florida · Lee · Collier · Charlotte · Hendry · Glades</div>
+  <h1 class="hero-title">Know Your <em>Plants</em></h1>
+  <p class="hero-desc">The most detailed plant reference for Southwest Florida. Native species, care guides, wildlife value, propagation, and seasonal calendars — all specific to our climate.</p>
+  <div class="hero-stats">
+    <div>
+      <div class="hero-stat-num" id="total-count">267</div>
+      <div class="hero-stat-label">Plants</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">15</div>
+      <div class="hero-stat-label">Categories</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">139</div>
+      <div class="hero-stat-label">Native species</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">9b–11</div>
+      <div class="hero-stat-label">USDA zones</div>
+    </div>
+  </div>
+</section>
+
+<div class="controls">
+  <div class="search-row">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" id="search" type="text" placeholder="Search plants, wildlife, uses, or characteristics…" autocomplete="off" spellcheck="false">
+    </div>
+    <button class="clear-btn" id="clear-btn">Clear all</button>
+  </div>
+
+  <div class="filters-row">
+    <span class="filter-label">Filter</span>
+    <select class="sd-select" id="f-cat">
+      <option value="">All categories</option>
+      <option value="trees">Trees</option>
+      <option value="palms">Palms</option>
+      <option value="fruit_trees">Fruit trees</option>
+      <option value="shrubs">Shrubs</option>
+      <option value="flowers">Flowers</option>
+      <option value="ground_covers">Ground covers</option>
+      <option value="vines">Vines</option>
+      <option value="grasses">Grasses</option>
+      <option value="aquatic">Aquatic</option>
+      <option value="epiphytes">Epiphytes</option>
+      <option value="succulents_cacti">Succulents & cacti</option>
+      <option value="ferns">Ferns</option>
+      <option value="bulbs_tubers">Bulbs & tubers</option>
+      <option value="weeds">Beneficial weeds</option>
+      <option value="invasive">Invasive</option>
+    </select>
+    <select class="sd-select" id="f-origin">
+      <option value="">All origins</option>
+      <option value="native">Native</option>
+      <option value="non_native_low_risk">Non-native (low risk)</option>
+      <option value="invasive">Invasive</option>
+    </select>
+    <select class="sd-select" id="f-water">
+      <option value="">Any water needs</option>
+      <option value="drought_tolerant">Drought tolerant</option>
+      <option value="moderate">Moderate</option>
+      <option value="water_loving">Water loving</option>
+    </select>
+    <select class="sd-select" id="f-light">
+      <option value="">Any light</option>
+      <option value="full_sun">Full sun</option>
+      <option value="partial_sun">Partial sun</option>
+      <option value="shade">Shade</option>
+    </select>
+    <select class="sd-select" id="f-tier">
+      <option value="">Any tier</option>
+      <option value="keystone">Keystone species</option>
+      <option value="standard">Standard</option>
+      <option value="reference">Reference</option>
+    </select>
+    <select class="sd-select" id="f-edible">
+      <option value="">Any edibility</option>
+      <option value="edible">Edible</option>
+      <option value="edible_cooked_only">Edible (cooked)</option>
+      <option value="edible_partial">Edible (partial)</option>
+      <option value="non_edible">Non-edible</option>
+      <option value="toxic">Toxic</option>
+    </select>
+    <select class="sd-select" id="f-pet">
+      <option value="">Any pet safety</option>
+      <option value="pet_safe">Pet safe</option>
+      <option value="pet_caution">Use caution</option>
+      <option value="toxic_to_pets">Toxic to pets</option>
+    </select>
+    <select class="sd-select" id="f-salt">
+      <option value="">Any salt tolerance</option>
+      <option value="high">High — coastal OK</option>
+      <option value="moderate">Moderate</option>
+      <option value="low">Low — inland only</option>
+    </select>
+  </div>
+
+  <div class="scenarios-row">
+    <span class="filter-label">I want to</span>
+    <button class="pill" data-sc="save_water">Save water</button>
+    <button class="pill" data-sc="fast_shade_privacy">Shade & privacy</button>
+    <button class="pill" data-sc="low_maintenance">Low maintenance</button>
+    <button class="pill" data-sc="pollinator_paradise">Pollinator paradise</button>
+    <button class="pill" data-sc="butterfly_garden">Butterfly garden</button>
+    <button class="pill" data-sc="bird_sanctuary">Bird sanctuary</button>
+    <button class="pill" data-sc="hummingbirds">Attract hummingbirds</button>
+    <button class="pill" data-sc="edible_landscape">Edible landscape</button>
+    <button class="pill" data-sc="canal_coastal">Canal / coastal yard</button>
+    <button class="pill" data-sc="rain_garden">Rain garden</button>
+    <button class="pill" data-sc="hoa_approved">HOA approved</button>
+    <button class="pill" data-sc="lawn_replacement">Replace my lawn</button>
+    <button class="pill" data-sc="pet_safe">Pet safe yard</button>
+  </div>
+</div>
+
+<div class="results-bar">
+  <div class="results-count">Showing <strong id="result-count">267</strong> plants</div>
+  <select class="sort-select" id="sort">
+    <option value="name">Sort: A–Z</option>
+    <option value="tier">Sort: Keystone first</option>
+    <option value="category">Sort: Category</option>
+    <option value="native">Sort: Native first</option>
+  </select>
+</div>
+
+<div id="loading" class="loading-state">
+  <div class="loading-title">Loading the swamp…</div>
+  <div style="font-size:13px;color:var(--text4);margin-top:6px">Fetching 267 plants</div>
+</div>
+
+<div class="plant-grid" id="grid" style="display:none"></div>
+
+<footer class="site-footer">
+  <div class="footer-brand">Swamp Druid</div>
+  <div class="footer-sub">Southwest Florida Plant Guide · swampdruid.com · Data sourced from UF/IFAS, FNPS, and regional extension services</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Plant detail">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <div class="modal-gallery" id="modal-gallery"></div>
+    <div class="modal-header" id="modal-header"></div>
+    <div class="modal-tabs" id="modal-tabs"></div>
+    <div id="modal-panels"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+const JSON_URL = 'https://steerplasty.github.io/swfl-plant-guide/swfl_plants_v3.json';
+const CLOUDINARY = 'https://res.cloudinary.com/dzgw9vhxm/image/upload/';
+const MONTHS = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+const MONTH_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const WILDLIFE_ICONS = {bees:'🐝',butterflies:'🦋',host_plant:'🌿',bird_food:'🐦',nesting:'🪺',mammals:'🦔',hummingbirds:'🌺'};
+const TIER_ORDER = {keystone:0,standard:1,reference:2};
+
+let allPlants = [], plantMap = {}, filtered = [], activeScenario = null;
+let galleryIndex = 0, galleryImages = [], galleryCaptions = [];
+
+function fmt(s){
+  if(!s) return 'Unknown';
+  return String(s).replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+}
+
+function esc(s){
+  if(!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function getImages(p){
+  const imgs = p.images || {};
+  const all = [];
+  const capts = [];
+  if(imgs.primary) { all.push(imgs.primary); capts.push(''); }
+  const gallery = Array.isArray(imgs.gallery) ? imgs.gallery : [];
+  const caps = Array.isArray(imgs.captions) ? imgs.captions : [];
+  gallery.forEach((url,i) => {
+    if(url){ all.push(url); capts.push(caps[i]||''); }
+  });
+  return {urls: all, captions: capts};
+}
+
+function buildCardImageHtml(p){
+  const {urls} = getImages(p);
+  if(urls.length){
+    return `<div class="card-image">
+      <img src="${esc(urls[0])}" alt="${esc(p.common_name)}" loading="lazy" onerror="this.parentElement.innerHTML=placeholderHtml('${esc(p.common_name)}')">
+      ${p.plant_tier ? `<div class="card-tier-ribbon ribbon-${p.plant_tier}">${p.plant_tier}</div>` : ''}
+      <div class="card-origin-dot dot-${p.origin==='native'?'native':p.origin==='invasive'?'invasive':'nonnative'}"></div>
+    </div>`;
+  }
+  return `<div class="card-image">
+    <div class="card-placeholder">
+      <div class="placeholder-glyph">${getCategoryGlyph(p.category)}</div>
+      <div class="placeholder-label">${fmt(p.category)}</div>
+    </div>
+    ${p.plant_tier ? `<div class="card-tier-ribbon ribbon-${p.plant_tier}">${p.plant_tier}</div>` : ''}
+    <div class="card-origin-dot dot-${p.origin==='native'?'native':p.origin==='invasive'?'invasive':'nonnative'}"></div>
+  </div>`;
+}
+
+window.placeholderHtml = function(name){
+  return `<div class="card-placeholder"><div class="placeholder-glyph">✦</div><div class="placeholder-label">${esc(name)}</div></div>`;
+};
+
+function getCategoryGlyph(cat){
+  const map = {trees:'🌳',palms:'🌴',fruit_trees:'🍊',shrubs:'🌿',flowers:'🌸',ground_covers:'🌱',vines:'🍃',grasses:'🌾',aquatic:'🌊',epiphytes:'🪴',succulents_cacti:'🌵',ferns:'🌿',bulbs_tubers:'🌰',weeds:'☘',invasive:'⚠'};
+  return map[cat] || '✦';
+}
+
+function buildTags(p){
+  const tags = [];
+  const origin = p.origin||'';
+  if(origin==='native') tags.push('<span class="tag tag-native">Native</span>');
+  else if(origin==='invasive') tags.push('<span class="tag tag-invasive">Invasive</span>');
+  else tags.push('<span class="tag tag-nonnative">Non-native</span>');
+
+  const water = Array.isArray(p.water_needs)?p.water_needs[0]:p.water_needs;
+  if(water==='drought_tolerant') tags.push('<span class="tag tag-drought">Drought tolerant</span>');
+  else if(water==='water_loving') tags.push('<span class="tag tag-water">Water loving</span>');
+
+  const edib = Array.isArray(p.edibility)?p.edibility[0]:p.edibility;
+  if(edib&&edib.includes('edible')&&!edib.includes('non')) tags.push('<span class="tag tag-edible">Edible</span>');
+  if(edib==='toxic') tags.push('<span class="tag tag-toxic">Toxic</span>');
+
+  const salt = Array.isArray(p.salt_tolerance)?p.salt_tolerance[0]:p.salt_tolerance;
+  if(salt==='high') tags.push('<span class="tag tag-salt">Salt tolerant</span>');
+
+  if(p.plant_tier==='keystone') tags.push('<span class="tag tag-keystone">Keystone</span>');
+
+  const pet = Array.isArray(p.pet_safety)?p.pet_safety[0]:p.pet_safety;
+  if(pet==='pet_safe') tags.push('<span class="tag tag-pet-safe">Pet safe</span>');
+  else if(pet==='toxic_to_pets') tags.push('<span class="tag tag-pet-toxic">Toxic to pets</span>');
+
+  return tags.join('');
+}
+
+function buildWildlifeIcons(p){
+  const wl = Array.isArray(p.wildlife)?p.wildlife:[];
+  return wl.slice(0,5).map(w=>`<span title="${fmt(w)}">${WILDLIFE_ICONS[w]||'◆'}</span>`).join('');
+}
+
+function renderCards(plants){
+  const grid = document.getElementById('grid');
+  document.getElementById('result-count').textContent = plants.length;
+  if(!plants.length){
+    grid.innerHTML = `<div class="no-results">
+      <div class="no-results-title">No plants found</div>
+      <div class="no-results-sub">Try adjusting your search or clearing some filters</div>
+    </div>`;
+    return;
+  }
+  grid.innerHTML = plants.map(p=>`
+    <div class="plant-card" data-id="${p.id}">
+      ${buildCardImageHtml(p)}
+      <div class="card-body">
+        <div class="card-names">
+          <div class="card-common">${esc(p.common_name)}</div>
+          <div class="card-scientific">${esc(p.scientific_name)}</div>
+        </div>
+        <div class="card-desc">${esc(p.description||'')}</div>
+        <div class="card-tags">${buildTags(p)}</div>
+        <div class="card-footer">
+          <div class="wildlife-row">${buildWildlifeIcons(p)}</div>
+          <div class="cat-label">${fmt(p.category)}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  grid.querySelectorAll('.plant-card').forEach(card=>{
+    card.addEventListener('click',()=>openModal(card.dataset.id));
+  });
+}
+
+function applyFilters(){
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const cat = document.getElementById('f-cat').value;
+  const origin = document.getElementById('f-origin').value;
+  const water = document.getElementById('f-water').value;
+  const light = document.getElementById('f-light').value;
+  const tier = document.getElementById('f-tier').value;
+  const edible = document.getElementById('f-edible').value;
+  const pet = document.getElementById('f-pet').value;
+  const salt = document.getElementById('f-salt').value;
+  const sort = document.getElementById('sort').value;
+
+  filtered = allPlants.filter(p=>{
+    if(q){
+      const hay=[p.common_name,p.scientific_name,p.description,p.expert_tips,
+        p.fun_fact,p.traditional_uses,p.conservation_notes,p.attracts_specific,
+        (p.wildlife||[]).join(' '),(p.scenarios||[]).join(' '),p.family,
+        (p.common_problems||[]).map(x=>x.problem).join(' ')].join(' ').toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    if(cat&&p.category!==cat) return false;
+    if(origin&&p.origin!==origin) return false;
+    if(water){const w=Array.isArray(p.water_needs)?p.water_needs:[p.water_needs];if(!w.includes(water))return false;}
+    if(light){const l=Array.isArray(p.light)?p.light:[p.light];if(!l.includes(light))return false;}
+    if(tier&&p.plant_tier!==tier) return false;
+    if(edible){const e=Array.isArray(p.edibility)?p.edibility[0]:p.edibility;if(e!==edible)return false;}
+    if(pet){const ps=Array.isArray(p.pet_safety)?p.pet_safety[0]:p.pet_safety;if(ps!==pet)return false;}
+    if(salt){const st=Array.isArray(p.salt_tolerance)?p.salt_tolerance[0]:p.salt_tolerance;if(st!==salt)return false;}
+    if(activeScenario){const sc=Array.isArray(p.scenarios)?p.scenarios:[];if(!sc.includes(activeScenario))return false;}
+    return true;
+  });
+
+  const sortFns = {
+    name:(a,b)=>a.common_name.localeCompare(b.common_name),
+    tier:(a,b)=>(TIER_ORDER[a.plant_tier]??9)-(TIER_ORDER[b.plant_tier]??9)||a.common_name.localeCompare(b.common_name),
+    category:(a,b)=>a.category.localeCompare(b.category)||a.common_name.localeCompare(b.common_name),
+    native:(a,b)=>{const o={native:0,non_native_low_risk:1,invasive:2};return(o[a.origin]??1)-(o[b.origin]??1)||a.common_name.localeCompare(b.common_name);}
+  };
+  filtered.sort(sortFns[sort]||sortFns.name);
+  renderCards(filtered);
+}
+
+function buildGalleryHtml(p){
+  const {urls,captions} = getImages(p);
+  galleryImages = urls;
+  galleryCaptions = captions;
+  galleryIndex = 0;
+
+  if(!urls.length){
+    return `<div class="modal-gallery">
+      <div class="gallery-main">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-glyph">${getCategoryGlyph(p.category)}</div>
+          <div class="gallery-placeholder-name">${esc(p.common_name)}</div>
+          <div class="gallery-placeholder-hint">No photos yet — check back soon</div>
+        </div>
+      </div>
+      <div class="gallery-upload-hint">Photos coming soon · Up to 20 images per plant</div>
+    </div>`;
+  }
+
+  const thumbs = urls.length > 1 ? `<div class="gallery-thumbs" id="gallery-thumbs">
+    ${urls.map((url,i)=>`<div class="gallery-thumb${i===0?' active':''}" data-idx="${i}">
+      <img src="${esc(url)}" alt="" loading="lazy">
+    </div>`).join('')}
+  </div>` : '';
+
+  return `<div class="modal-gallery">
+    <div class="gallery-main" id="gallery-main">
+      <img id="gallery-img" src="${esc(urls[0])}" alt="${esc(p.common_name)}" onerror="this.style.display='none'">
+      ${urls.length>1?`<button class="gallery-nav prev" id="gallery-prev" aria-label="Previous">‹</button>
+      <button class="gallery-nav next" id="gallery-next" aria-label="Next">›</button>
+      <div class="gallery-counter" id="gallery-counter">1 / ${urls.length}</div>`:''}
+    </div>
+    <div class="gallery-caption" id="gallery-caption">${esc(captions[0]||'')}</div>
+    ${thumbs}
+  </div>`;
+}
+
+function updateGallery(idx){
+  if(!galleryImages.length) return;
+  idx = Math.max(0,Math.min(idx,galleryImages.length-1));
+  galleryIndex = idx;
+  const img = document.getElementById('gallery-img');
+  const cap = document.getElementById('gallery-caption');
+  const ctr = document.getElementById('gallery-counter');
+  if(img) img.src = galleryImages[idx];
+  if(cap) cap.textContent = galleryCaptions[idx]||'';
+  if(ctr) ctr.textContent = `${idx+1} / ${galleryImages.length}`;
+  document.querySelectorAll('.gallery-thumb').forEach((t,i)=>{
+    t.classList.toggle('active',i===idx);
+  });
+}
+
+function bindGalleryEvents(){
+  const prev = document.getElementById('gallery-prev');
+  const next = document.getElementById('gallery-next');
+  if(prev) prev.addEventListener('click',()=>updateGallery(galleryIndex-1));
+  if(next) next.addEventListener('click',()=>updateGallery(galleryIndex+1));
+  document.querySelectorAll('.gallery-thumb').forEach(t=>{
+    t.addEventListener('click',()=>updateGallery(parseInt(t.dataset.idx)));
+  });
+}
+
+function openModal(id){
+  const p = plantMap[id];
+  if(!p) return;
+
+  document.getElementById('modal-gallery').outerHTML;
+  document.getElementById('modal').querySelector('.modal-gallery')?.remove();
+
+  const galleryHtml = buildGalleryHtml(p);
+
+  const header = document.getElementById('modal-header');
+  header.innerHTML = `
+    <div class="modal-common">${esc(p.common_name)}</div>
+    <div class="modal-scientific">${esc(p.scientific_name)}${p.family?` <span>· ${esc(p.family)}</span>`:''}</div>
+    <div class="modal-meta">${buildTags(p)}</div>
+  `;
+
+  const galleryEl = document.createElement('div');
+  galleryEl.innerHTML = galleryHtml;
+  const modal = document.getElementById('modal');
+  modal.insertBefore(galleryEl.firstElementChild, header);
+  bindGalleryEvents();
+
+  const TABS = [
+    {id:'overview',label:'Overview'},
+    {id:'care',label:'Seasonal care'},
+    {id:'growing',label:'Growing'},
+    {id:'wildlife',label:'Wildlife'},
+    {id:'problems',label:'Problems'},
+  ];
+
+  document.getElementById('modal-tabs').innerHTML = TABS.map((t,i)=>
+    `<div class="tab${i===0?' active':''}" data-tab="${t.id}">${t.label}</div>`
+  ).join('');
+
+  const panels = document.getElementById('modal-panels');
+
+  function renderPanel(tabId){
+    panels.innerHTML = `<div class="panel active" id="panel-${tabId}">${buildPanel(p,tabId)}</div>`;
+    panels.querySelectorAll('.companion-chip').forEach(chip=>{
+      chip.addEventListener('click',e=>{
+        e.stopPropagation();
+        openModal(chip.dataset.id);
+      });
+    });
+  }
+
+  renderPanel('overview');
+
+  document.getElementById('modal-tabs').querySelectorAll('.tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      renderPanel(tab.dataset.tab);
+    });
+  });
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal').scrollTop = 0;
+}
+
+function buildPanel(p,id){
+  if(id==='overview') return buildOverview(p);
+  if(id==='care') return buildCare(p);
+  if(id==='growing') return buildGrowing(p);
+  if(id==='wildlife') return buildWildlife(p);
+  if(id==='problems') return buildProblems(p);
+  return '';
+}
+
+function buildOverview(p){
+  const h = p.height_min_ft&&p.height_max_ft?`${p.height_min_ft}–${p.height_max_ft} ft`:p.height_max_ft?`Up to ${p.height_max_ft} ft`:'Not documented';
+  const light = (Array.isArray(p.light)?p.light:[p.light]).map(fmt).join(', ');
+  const water = fmt(Array.isArray(p.water_needs)?p.water_needs[0]:p.water_needs);
+  const salt = fmt(Array.isArray(p.salt_tolerance)?p.salt_tolerance[0]:p.salt_tolerance);
+  let html = '';
+  if(p.description) html+=`<div class="section"><div class="desc-block">${esc(p.description)}</div></div>`;
+  html+=`<div class="section">
+    <div class="section-title">Quick reference</div>
+    <div class="quick-grid">
+      <div class="qs"><div class="qs-label">Light</div><div class="qs-val">${light}</div></div>
+      <div class="qs"><div class="qs-label">Water</div><div class="qs-val">${water}</div></div>
+      <div class="qs"><div class="qs-label">Salt tolerance</div><div class="qs-val">${salt}</div></div>
+      <div class="qs"><div class="qs-label">Mature height</div><div class="qs-val">${h}</div></div>
+      <div class="qs"><div class="qs-label">Growth rate</div><div class="qs-val">${fmt(p.growth_rate_category||p.growth_rate||'Unknown')}</div></div>
+      <div class="qs"><div class="qs-label">Easy to grow</div><div class="qs-val">${fmt(p.easy_to_grow_score||'Unknown')}</div></div>
+      <div class="qs"><div class="qs-label">Hurricane resistance</div><div class="qs-val">${fmt(p.hurricane_resistance||'Unknown')}</div></div>
+      <div class="qs"><div class="qs-label">Fertilizer needs</div><div class="qs-val">${fmt(p.fertilizer_needs||'Unknown')}</div></div>
+    </div>
+  </div>`;
+  if(p.expert_tips) html+=`<div class="section"><div class="section-title">What they don't tell you at the nursery</div><div class="tip-box"><strong>Pro tip:</strong> ${esc(p.expert_tips)}</div></div>`;
+  if(p.fun_fact) html+=`<div class="section"><div class="section-title">Fun fact</div><div class="fact-box">${esc(p.fun_fact)}</div></div>`;
+  if(p.warnings&&p.warnings.length) html+=`<div class="section"><div class="section-title">Warnings</div>${p.warnings.map(w=>`<div class="warn-box">${esc(w)}</div>`).join('')}</div>`;
+  if(p.traditional_uses) html+=`<div class="section"><div class="section-title">Traditional uses</div><div class="text-block">${esc(p.traditional_uses)}</div></div>`;
+  if(p.conservation_notes) html+=`<div class="section"><div class="section-title">Conservation notes</div><div class="text-block">${esc(p.conservation_notes)}</div></div>`;
+  if(p.where_to_buy_notes) html+=`<div class="section"><div class="section-title">Where to find it</div><div class="text-block">${esc(p.where_to_buy_notes)}</div></div>`;
+  return html;
+}
+
+function buildCare(p){
+  let html = '';
+  if(p.seasonal_care&&typeof p.seasonal_care==='object'&&Object.keys(p.seasonal_care).length){
+    html+=`<div class="section"><div class="section-title">Month by month — SW Florida calendar</div>
+      <div class="seasonal-grid">${MONTHS.map((m,i)=>`<div class="month-card">
+        <div class="month-name">${MONTH_SHORT[i]}</div>
+        <div class="month-text">${esc(p.seasonal_care[m]||'No notes for this month.')}</div>
+      </div>`).join('')}</div></div>`;
+  } else {
+    html+=`<div class="section"><div class="text-block" style="color:var(--text3)">Seasonal care guide not yet documented for this plant. Check back as we complete the database.</div></div>`;
+  }
+  if(p.transplant_notes) html+=`<div class="section"><div class="section-title">Transplanting</div><div class="text-block">${esc(p.transplant_notes)}</div></div>`;
+  return html;
+}
+
+function buildGrowing(p){
+  let html = '';
+  const hasProp = p.propagation_seed||p.propagation_cutting||p.propagation_division;
+  if(hasProp){
+    html+=`<div class="section"><div class="section-title">Propagation</div><div class="prop-grid">
+      ${p.propagation_seed?`<div class="prop-card"><div class="prop-label">From seed</div><div class="prop-text">${esc(p.propagation_seed)}</div></div>`:''}
+      ${p.propagation_cutting?`<div class="prop-card"><div class="prop-label">From cuttings</div><div class="prop-text">${esc(p.propagation_cutting)}</div></div>`:''}
+      ${p.propagation_division?`<div class="prop-card"><div class="prop-label">By division</div><div class="prop-text">${esc(p.propagation_division)}</div></div>`:''}
+    </div></div>`;
+  }
+  if(p.germination_method||p.germination_days){
+    html+=`<div class="section"><div class="section-title">Germination</div>
+      <div class="quick-grid">
+        ${p.germination_method?`<div class="qs"><div class="qs-label">Method</div><div class="qs-val" style="font-size:12px">${esc(p.germination_method)}</div></div>`:''}
+        ${p.germination_days?`<div class="qs"><div class="qs-label">Days to sprout</div><div class="qs-val">${esc(p.germination_days)}</div></div>`:''}
+      </div>
+      ${p.germination_notes?`<div class="text-block" style="margin-top:8px">${esc(p.germination_notes)}</div>`:''}
+    </div>`;
+  }
+  if(p.companion_plants&&p.companion_plants.length){
+    html+=`<div class="section"><div class="section-title">Companion plants</div>
+      <div class="companions-wrap">${p.companion_plants.map(id=>{
+        const cp=plantMap[id];
+        return `<div class="companion-chip" data-id="${esc(id)}">${cp?esc(cp.common_name):id.replace(/-/g,' ')}</div>`;
+      }).join('')}</div></div>`;
+  }
+  if(p.looks_like_plants){
+    html+=`<div class="section"><div class="lookalike-box">
+      <div class="lookalike-title">⚠ Lookalike alert</div>
+      <div class="lookalike-text"><strong>Looks like:</strong> ${esc(p.looks_like_plants)}</div>
+      ${p.looks_like_notes?`<div class="lookalike-text" style="margin-top:6px">${esc(p.looks_like_notes)}</div>`:''}
+    </div></div>`;
+  }
+  if(!hasProp&&!p.germination_method&&!p.companion_plants&&!p.looks_like_plants){
+    html+=`<div class="text-block" style="color:var(--text3)">Growing details not yet documented for this plant.</div>`;
+  }
+  return html;
+}
+
+function buildWildlife(p){
+  let html = '';
+  const wl = Array.isArray(p.wildlife)?p.wildlife:[];
+  if(wl.length){
+    html+=`<div class="section"><div class="section-title">Wildlife value</div>
+      <div class="wildlife-tags">${wl.map(w=>`<div class="wildlife-tag">${WILDLIFE_ICONS[w]||'◆'} ${fmt(w)}</div>`).join('')}</div>
+    </div>`;
+  }
+  if(p.attracts_specific) html+=`<div class="section"><div class="section-title">Species attracted</div><div class="text-block">${esc(p.attracts_specific)}</div></div>`;
+  if(p.pollinator_value) html+=`<div class="section"><div class="section-title">Pollinator value</div><div class="qs" style="display:inline-block"><div class="qs-val">${fmt(p.pollinator_value)}</div></div></div>`;
+  if(p.conservation_notes) html+=`<div class="section"><div class="section-title">Conservation notes</div><div class="text-block">${esc(p.conservation_notes)}</div></div>`;
+  if(!wl.length&&!p.attracts_specific) html+=`<div class="text-block" style="color:var(--text3)">Wildlife data not yet documented for this plant.</div>`;
+  return html;
+}
+
+function buildProblems(p){
+  const probs = Array.isArray(p.common_problems)?p.common_problems:[];
+  if(!probs.length) return `<div class="text-block" style="color:var(--text3)">Common problems not yet documented for this plant.</div>`;
+  return probs.map(pr=>`<div class="problem-card">
+    <div class="problem-name">${esc(pr.problem)}</div>
+    <div class="problem-row"><em>Symptoms:</em> ${esc(pr.symptoms)}</div>
+    <div class="problem-row"><em>Solution:</em> ${esc(pr.solution)}</div>
+    <div class="problem-confidence">${pr.confidence||'unverified'}</div>
+  </div>`).join('');
+}
+
+document.getElementById('modal-close').addEventListener('click',()=>{
+  document.getElementById('modal-overlay').classList.remove('open');
+});
+
+document.getElementById('modal-overlay').addEventListener('click',e=>{
+  if(e.target===document.getElementById('modal-overlay'))
+    document.getElementById('modal-overlay').classList.remove('open');
+});
+
+document.addEventListener('keydown',e=>{
+  const overlay = document.getElementById('modal-overlay');
+  if(!overlay.classList.contains('open')) return;
+  if(e.key==='Escape') overlay.classList.remove('open');
+  if(e.key==='ArrowLeft') updateGallery(galleryIndex-1);
+  if(e.key==='ArrowRight') updateGallery(galleryIndex+1);
+});
+
+document.querySelectorAll('.pill').forEach(pill=>{
+  pill.addEventListener('click',()=>{
+    const sc = pill.dataset.sc;
+    if(activeScenario===sc){
+      activeScenario=null;
+      pill.classList.remove('active');
+    } else {
+      document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+      activeScenario=sc;
+      pill.classList.add('active');
+    }
+    applyFilters();
+  });
+});
+
+['search','f-cat','f-origin','f-water','f-light','f-tier','f-edible','f-pet','f-salt','sort']
+  .forEach(id=>document.getElementById(id).addEventListener('input',applyFilters));
+
+document.getElementById('clear-btn').addEventListener('click',()=>{
+  document.getElementById('search').value='';
+  ['f-cat','f-origin','f-water','f-light','f-tier','f-edible','f-pet','f-salt'].forEach(id=>{
+    document.getElementById(id).value='';
+  });
+  activeScenario=null;
+  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+  applyFilters();
+});
+
+fetch(JSON_URL)
+  .then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+  .then(data=>{
+    allPlants = data.plants||[];
+    allPlants.forEach(p=>plantMap[p.id]=p);
+    document.getElementById('total-count').textContent = allPlants.length;
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('grid').style.display = 'grid';
+    applyFilters();
+  })
+  .catch(err=>{
+    document.getElementById('loading').innerHTML = `
+      <div class="loading-title">Could not load plant data</div>
+      <div style="font-size:13px;color:var(--text3);margin-top:6px">Please refresh the page. If the problem persists, the database may be updating.</div>
+    `;
+    console.error('Plant guide error:',err);
+  });
+
+})();
+</script>
+</body>
+</html>
