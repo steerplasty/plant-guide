@@ -3,7 +3,7 @@
     "title": "Southwest Florida Plant Guide",
     "version": "1.0.0",
     "created": "2025-06-05",
-    "last_updated": "2026-06-11",
+    "last_updated": "2026-06-12",
     "region": "Southwest Florida",
     "counties": [
       "Lee",
@@ -412,8 +412,12 @@
       "description": "Iconic tourist tree with striking peeling red-copper bark. One of SW Florida's fastest growing native trees and exceptionally hurricane resistant. Small fruits eaten by many birds. Extremely drought and salt tolerant. Great for quick canopy cover.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273683/Gumbo_Limbo_Tree_oogxlx.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -450,7 +454,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -596,8 +600,12 @@
       "description": "Native pine critical to Florida's flatwood ecosystem. Seeds eaten by doves, quail, squirrels, and many songbirds. Host tree for numerous moth and butterfly larvae. Essential cavity nesting sites for woodpeckers, owls, and flying squirrels. Perfectly suited to Cape Coral's well-drained sandy substrate.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273685/Slash_Pine_tnhlbu.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -774,8 +782,12 @@
       "description": "Majestic native for wet areas, canal edges, and pond margins. Seeds eaten by wood ducks, sandhill cranes, and many birds. Important nesting habitat for ospreys, herons, and owls. Cypress knees create unique microhabitat. Stunning russet-orange fall color. Extremely long-lived.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273682/Bald_Cypress_ljcqsm.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -813,7 +825,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -993,7 +1005,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_moderate",
       "soil_confidence": "unverified",
@@ -1143,8 +1155,12 @@
       "description": "One of the most bird-attractive fruiting trees in Florida. Rose-breasted grosbeaks, scarlet tanagers, catbirds, and dozens of other species flock to it during fruiting in spring. Berries also eaten by raccoons, opossums, and foxes. Edible for humans — sweet and abundant.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273685/Red_Mullberry_Tree_alxjvz.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1180,7 +1196,7 @@
         "any"
       ],
       "soil_ph_preference": "slightly acidic to neutral",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unverified",
@@ -1332,8 +1348,12 @@
       "description": "Fast-growing native that works as a large shrub or small multi-trunk tree. Waxy gray berries are the primary winter food source for yellow-rumped warblers and many other migrating birds. Nitrogen-fixer that improves soil health. Highly salt tolerant and adaptable.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273686/Wax_Myrtle_rxnhuj.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1519,8 +1539,12 @@
         "Unripe fruits are extremely astringent — wait until fully soft and ripe before eating."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273682/American_Persimmon_lvyufu.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1557,7 +1581,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -1698,8 +1722,12 @@
         "Often protected by county ordinances — check local regulations before removing mature specimens."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273685/Southern_Red_Cedar_qbwgpn.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1735,8 +1763,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -1878,8 +1906,12 @@
         "Roots are very aggressive near hardscape and foundations. Plant well away from structures. Protected tree in many counties — check before removing."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273686/Strangler_Fig_Tree_t8uivw.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -1916,8 +1948,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -2062,8 +2094,12 @@
       "description": "Classic coastal native highly tolerant of salt, wind, and drought. A keystone of SW Florida's coastal hammock habitat. Can be maintained as a clipped formal hedge or allowed to grow into an attractive multi-trunk tree.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273682/Buttonwood_Tree_aedocs.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2252,8 +2288,12 @@
         "Protected by Florida statute near coastlines — trimming may require permits. Check local regulations before pruning."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273685/Seag_Grape_Tree_kovpzz.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2288,7 +2328,7 @@
         "rocky"
       ],
       "soil_ph_preference": "adaptable to alkaline",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "verified",
@@ -2440,8 +2480,12 @@
       "description": "One of SW Florida's most spectacular small native trees. Clusters of vivid orange trumpet flowers bloom nearly year-round and are a magnet for hummingbirds and bees. Very salt and drought tolerant. Stays relatively small at 15-25 ft — perfect for smaller yards.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273683/Geiger_Tree_j0z6zw.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2477,7 +2521,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -2627,8 +2671,12 @@
       "description": "Florida's native mahogany — a beautiful broad canopy tree of South Florida's tropical hardwood hammocks. Seeds in large woody pods eaten by parrots and other birds. Host plant for several moth species. Semi-deciduous in late winter.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273684/Mahogany_Tree_eohiho.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2814,8 +2862,12 @@
         "Has sharp thorns — plant away from high foot traffic areas."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273686/Sweet_Acacia_Tree_oz92dh.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -2851,8 +2903,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -3005,8 +3057,12 @@
         "Mildly toxic to pets if large quantities of seeds are ingested — monitor pets around fallen seed pods."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273685/Royal_Poinciana_Tree_sg24xc.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3184,8 +3240,12 @@
         "Toxic to pets — milky sap causes vomiting, diarrhea, and skin irritation in dogs and cats. Keep pets away from fallen flowers and branches."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273683/Frangipani_Tree_w6xqxm.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3220,8 +3280,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -3536,8 +3596,12 @@
       "description": "Very popular non-native with distinctive bright red brush-like flower spikes. Hummingbirds and bees adore the flowers. Drought and salt tolerant. Can be grown as a large shrub or trained into a multi-trunk tree up to 25 ft.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273682/Bottle_Brush_Tree_hozl01.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3574,7 +3638,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -3717,8 +3781,12 @@
         "Avoid heavy topping — it destroys the natural form and weakens the tree. Prune lightly or not at all."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273683/Crepe_Myrtle_Tree_wwxhqn.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -3754,7 +3822,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 6.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -3939,7 +4007,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained_to_wet",
       "soil_confidence": "unknown",
@@ -4573,7 +4641,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -5280,8 +5348,8 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -5694,7 +5762,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unverified",
@@ -5904,7 +5972,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
@@ -6117,7 +6185,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -6323,8 +6391,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained_to_wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -6743,7 +6811,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -6943,7 +7011,7 @@
         "any_submerged"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "saturated_to_submerged",
       "soil_confidence": "verified",
@@ -7149,8 +7217,8 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": "adaptable",
-      "soil_ph_max": 8.0,
-      "soil_drainage": 0.0,
+      "soil_ph_max": 8,
+      "soil_drainage": 0,
       "soil_confidence": "unknown",
       "florida_zone": [
         "10a",
@@ -7351,7 +7419,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -7559,7 +7627,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -7759,7 +7827,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -7953,8 +8021,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -8153,8 +8221,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "any",
       "soil_confidence": "verified",
       "florida_zone": [
@@ -8546,8 +8614,8 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 4.0,
-      "soil_ph_max": 9.0,
+      "soil_ph_min": 4,
+      "soil_ph_max": 9,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -8696,8 +8764,12 @@
       "description": "Underused native understory tree related to blueberry. Delicate bell-shaped white spring flowers feed bees. Shiny blue-black fall berries attract birds. Bark flakes to reveal attractive reddish layers. Well adapted to Florida's sandy soils.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273686/Sparkle_Berry_Tree_b400kl.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8878,8 +8950,12 @@
       "description": "Native coastal hammock tree with clusters of small grape-like fruits beloved by white-crowned pigeons and mockingbirds. Edible for humans — small and tart. Very salt and drought tolerant.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273684/Pigeon_Plum_bc3j8n.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -8915,7 +8991,7 @@
       ],
       "soil_ph_preference": "adaptable to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9052,8 +9128,12 @@
       "description": "Attractive native hammock tree with glossy pinnate leaves and clusters of small purple-black fruits that many birds eat. Fast-growing and good for quick canopy. Interesting compound leaves give a tropical appearance.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273684/Paradise_Tree_r5wvaz.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9227,8 +9307,12 @@
       "description": "Often overlooked but highly valuable native coastal hammock tree. Small red fruits are an important food source for migrating warblers and vireos. One of the few native trees that tolerates shade well. Very salt tolerant.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273682/Blolly_Tree_efsw5u.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9265,7 +9349,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9403,8 +9487,12 @@
         "Leaves typically eaten cooked or dried rather than raw in large quantities."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273684/Moringa_Tree_b3egnb.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9439,8 +9527,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -9577,8 +9665,12 @@
       "description": "Breathtaking tree with clouds of lavender-purple tubular flowers in spring. Feathery fern-like foliage attractive even when not in bloom. Less salt tolerant so better for inland properties. Not invasive in FL.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273684/Jacaranda_Tree_jwmwhh.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9614,7 +9706,7 @@
       ],
       "soil_ph_preference": "slightly acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9758,8 +9850,12 @@
       "description": "One of the most commonly planted shade trees in SW Florida. Dense evergreen canopy provides excellent shade and bird nesting habitat. Very hurricane resistant. Salt and drought tolerant. Slow growing but extremely long-lived.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273682/Black_Olive_Tree_bqavxw.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -9795,7 +9891,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -9933,8 +10029,12 @@
       "description": "Stunning ornamental with large velvety deep purple flowers and soft fuzzy leaves. Bees, butterflies, and hummingbirds visit frequently. Not salt tolerant — better for inland properties.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273685/Princess_Flower_Tree_xpiok4.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -10116,8 +10216,12 @@
         "Toxic to pets and livestock — all parts especially seed pods are toxic. The pulp is used medicinally but should never be self-administered."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273683/Golden_Shower_Tree_remfln.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -10153,7 +10257,7 @@
       ],
       "soil_ph_preference": "slightly acidic to alkaline",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -10335,7 +10439,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
@@ -10533,7 +10637,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -10732,7 +10836,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -10939,7 +11043,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -11142,7 +11246,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -11341,8 +11445,8 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -11584,7 +11688,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -11822,7 +11926,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -12049,7 +12153,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -12528,7 +12632,7 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -12761,8 +12865,8 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -12968,8 +13072,8 @@
         "any"
       ],
       "soil_ph_preference": "slightly_acidic",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -13173,8 +13277,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -13386,7 +13490,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_moderate",
       "soil_confidence": "unverified",
@@ -13604,7 +13708,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet",
       "soil_confidence": "unverified",
@@ -13817,8 +13921,8 @@
         "any"
       ],
       "soil_ph_preference": "slightly_acidic",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -14027,7 +14131,7 @@
       ],
       "soil_ph_preference": "slightly_acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -14450,7 +14554,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
@@ -14656,8 +14760,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -14862,7 +14966,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -15486,8 +15590,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -16098,7 +16202,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -16306,8 +16410,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -17125,7 +17229,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -17334,8 +17438,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -17540,8 +17644,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -17748,7 +17852,7 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -17954,7 +18058,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -18341,7 +18445,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -18917,7 +19021,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
@@ -19117,7 +19221,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
@@ -19518,7 +19622,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -19724,8 +19828,8 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -19920,8 +20024,8 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": "adaptable",
-      "soil_ph_max": 8.0,
-      "soil_drainage": 0.0,
+      "soil_ph_max": 8,
+      "soil_drainage": 0,
       "soil_confidence": "unknown",
       "florida_zone": [
         "10a",
@@ -20111,8 +20215,8 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": "adaptable",
-      "soil_ph_max": 8.0,
-      "soil_drainage": 0.0,
+      "soil_ph_max": 8,
+      "soil_drainage": 0,
       "soil_confidence": "unknown",
       "florida_zone": [
         "10a",
@@ -20302,8 +20406,8 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": "adaptable",
-      "soil_ph_max": 8.0,
-      "soil_drainage": 0.0,
+      "soil_ph_max": 8,
+      "soil_drainage": 0,
       "soil_confidence": "unknown",
       "florida_zone": [
         "10a",
@@ -20500,8 +20604,8 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": "adaptable",
-      "soil_ph_max": 8.0,
-      "soil_drainage": 0.0,
+      "soil_ph_max": 8,
+      "soil_drainage": 0,
       "soil_confidence": "unknown",
       "florida_zone": [
         "10a",
@@ -20695,7 +20799,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -20890,8 +20994,8 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -21088,7 +21192,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 7.0,
+      "soil_ph_min": 7,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -21283,7 +21387,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -21483,7 +21587,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -21678,7 +21782,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -21872,7 +21976,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -22066,7 +22170,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -22264,7 +22368,7 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -22465,7 +22569,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
@@ -22666,7 +22770,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -22853,7 +22957,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -23238,7 +23342,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -23440,7 +23544,7 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -23630,8 +23734,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -23825,8 +23929,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -24017,8 +24121,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -24212,8 +24316,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -24407,7 +24511,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -24600,8 +24704,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 9.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 9,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -24796,7 +24900,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -24987,7 +25091,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -25182,7 +25286,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -25370,8 +25474,8 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 4.0,
-      "soil_ph_max": 9.0,
+      "soil_ph_min": 4,
+      "soil_ph_max": 9,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -25562,8 +25666,8 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 9.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 9,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -25755,8 +25859,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -25948,8 +26052,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -26142,7 +26246,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -26292,8 +26396,12 @@
       "description": "Stunning ornamental tree with large orchid-like purple-pink flowers that bloom in fall and winter — a welcome burst of color when little else is blooming. Sterile hybrid so does not set seed — no invasive risk. Very popular in SW Florida landscapes.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273683/Hong_Kong_Orchid_Tree_pkt7mn.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26466,8 +26574,12 @@
         "Mildly toxic to cats and dogs — can cause vomiting and lethargy if needles are ingested."
       ],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273684/Norfolk_Island_Pine_vnskg8.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26645,8 +26757,12 @@
       "description": "Tropical tree with intensely fragrant yellow-green star-shaped flowers used in perfumery — the scent is extraordinary. Blooms nearly year-round. Bees and hummingbirds visit. Grows very fast into a large weeping-form tree.",
       "warnings": [],
       "images": {
-        "primary": "",
+        "primary": "https://res.cloudinary.com/dzgw9vhxm/image/upload/v1781273686/Ylang_Ylang_Tree_cupt2p.png",
         "gallery": [],
+        "captions": [
+          ""
+        ],
+        "photo_credits": [],
         "community": []
       },
       "status": "published",
@@ -26682,7 +26798,7 @@
       ],
       "soil_ph_preference": "slightly acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -26854,7 +26970,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -27050,7 +27166,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -27249,8 +27365,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -27444,7 +27560,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -27641,8 +27757,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -27872,7 +27988,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -28101,7 +28217,7 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -28347,7 +28463,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -28586,7 +28702,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -28803,7 +28919,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -29218,7 +29334,7 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -29417,8 +29533,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -29831,7 +29947,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -30039,8 +30155,8 @@
         "any"
       ],
       "soil_ph_preference": "slightly_acidic",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -30255,7 +30371,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unverified",
@@ -30466,8 +30582,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -30678,7 +30794,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -30874,7 +30990,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -31071,8 +31187,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -31271,8 +31387,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -31472,7 +31588,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -31677,8 +31793,8 @@
         "any"
       ],
       "soil_ph_preference": "slightly_acidic",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -31888,7 +32004,7 @@
         "loamy"
       ],
       "soil_ph_preference": "acidic",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 6.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "verified",
@@ -32301,7 +32417,7 @@
       ],
       "soil_ph_preference": "slightly_acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -32720,7 +32836,7 @@
         "loamy"
       ],
       "soil_ph_preference": "acidic",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 6.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "verified",
@@ -32931,7 +33047,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -33142,7 +33258,7 @@
       ],
       "soil_ph_preference": "adaptable",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -33350,8 +33466,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -33748,8 +33864,8 @@
         "any"
       ],
       "soil_ph_preference": "slightly_acidic",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -33955,7 +34071,7 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_moderate",
       "soil_confidence": "unverified",
@@ -34165,7 +34281,7 @@
       ],
       "soil_ph_preference": "slightly_acidic",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -34377,8 +34493,8 @@
         "any"
       ],
       "soil_ph_preference": "adaptable",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unverified",
       "florida_zone": [
@@ -34581,7 +34697,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -34788,7 +34904,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -34981,7 +35097,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -35185,8 +35301,8 @@
         "loamy"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -35398,7 +35514,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -35601,7 +35717,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -35813,7 +35929,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
@@ -36422,7 +36538,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -36623,8 +36739,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -36822,7 +36938,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -37020,7 +37136,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -37225,8 +37341,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -37627,7 +37743,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -38228,8 +38344,8 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 9.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 9,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -38424,7 +38540,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -38622,7 +38738,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -38813,7 +38929,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -39006,8 +39122,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 7.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -39404,7 +39520,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -39604,8 +39720,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained_to_wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -40394,7 +40510,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -40590,7 +40706,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -40784,7 +40900,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -40983,7 +41099,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -41189,7 +41305,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained_to_wet",
       "soil_confidence": "unknown",
@@ -41594,7 +41710,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -41800,7 +41916,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -41996,7 +42112,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -42193,7 +42309,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -42784,7 +42900,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -42975,7 +43091,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -43360,7 +43476,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 4.0,
+      "soil_ph_min": 4,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
@@ -43561,7 +43677,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -43954,7 +44070,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
@@ -44147,7 +44263,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
@@ -44534,8 +44650,8 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -44729,8 +44845,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 9.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 9,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -44922,7 +45038,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
@@ -45116,8 +45232,8 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -45308,7 +45424,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet_to_moderate",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -45507,7 +45623,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
@@ -45702,7 +45818,7 @@
         "wet"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 7.5,
       "soil_drainage": "wet_to_moderate",
       "soil_confidence": "unknown",
@@ -47443,7 +47559,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -47833,7 +47949,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 8.0,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -48028,8 +48144,8 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -48222,8 +48338,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 9.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 9,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -48420,8 +48536,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -48607,8 +48723,8 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -48798,7 +48914,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -48994,7 +49110,7 @@
         "rocky"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
+      "soil_ph_min": 6,
       "soil_ph_max": 7.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
@@ -49193,7 +49309,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -49390,7 +49506,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -49583,7 +49699,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -49777,7 +49893,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -49970,7 +50086,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "wet",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -50161,7 +50277,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -50363,7 +50479,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 4.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -50559,7 +50675,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -50956,7 +51072,7 @@
       ],
       "soil_ph_preference": "unknown",
       "soil_ph_min": 5.5,
-      "soil_ph_max": 7.0,
+      "soil_ph_max": 7,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -51151,8 +51267,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -51553,8 +51669,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 6.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 6,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained_to_moderate",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -51750,8 +51866,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "wet_to_well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -51940,8 +52056,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -52130,8 +52246,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -52320,8 +52436,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -52511,8 +52627,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -52700,8 +52816,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -52889,8 +53005,8 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
-      "soil_ph_max": 8.0,
+      "soil_ph_min": 5,
+      "soil_ph_max": 8,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
       "florida_zone": [
@@ -53084,7 +53200,7 @@
         "any"
       ],
       "soil_ph_preference": "unknown",
-      "soil_ph_min": 5.0,
+      "soil_ph_min": 5,
       "soil_ph_max": 8.5,
       "soil_drainage": "well_drained",
       "soil_confidence": "unknown",
