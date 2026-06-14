@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SWFL Plant Guide — Editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --moss:#2B3A2E;
+    --moss-dark:#1F2A22;
+    --parchment:#F6F1E4;
+    --parchment-deep:#EDE5D2;
+    --clay:#C1693A;
+    --clay-dark:#A8552B;
+    --sage:#8FA98C;
+    --ink:#1F2620;
+    --ink-soft:#5C6B5E;
+    --line:#D9CFB8;
+    --warn-bg:#FBEFE4;
+    --warn-text:#8A4A1F;
+    --ok-bg:#E7F0E3;
+    --ok-text:#3D6647;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--parchment);
+    color:var(--ink);
+    height:100vh;
+    overflow:hidden;
+  }
+  .app{
+    display:grid;
+    grid-template-columns: 340px 1fr;
+    height:100vh;
+  }
+
+  /* ===== Sidebar ===== */
+  .sidebar{
+    background:var(--moss);
+    color:var(--parchment);
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+  }
+  .sidebar-header{
+    padding:22px 20px 16px;
+    border-bottom:1px solid rgba(246,241,228,0.12);
+  }
+  .sidebar-header .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--sage);
+    margin:0 0 4px;
+  }
+  .sidebar-header h1{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:22px;
+    margin:0;
+    line-height:1.2;
+  }
+  .gh-status{
+    margin-top:14px;
+    font-size:12px;
+    font-family:'JetBrains Mono', monospace;
+    color:var(--sage);
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .gh-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:#6b7d6c;
+    flex-shrink:0;
+  }
+  .gh-dot.connected{background:#9FD8A0;}
+  .gh-dot.error{background:var(--clay);}
+
+  .search-box{
+    padding:14px 20px;
+    border-bottom:1px solid rgba(246,241,228,0.12);
+  }
+  .search-box input{
+    width:100%;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid rgba(246,241,228,0.18);
+    background:rgba(246,241,228,0.06);
+    color:var(--parchment);
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+  }
+  .search-box input::placeholder{color:rgba(246,241,228,0.4);}
+  .search-box input:focus{outline:2px solid var(--clay); outline-offset:1px;}
+
+  .filter-row{
+    padding:0 20px 14px;
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    border-bottom:1px solid rgba(246,241,228,0.12);
+  }
+  .filter-row select{
+    flex:1;
+    min-width:0;
+    padding:7px 8px;
+    border-radius:6px;
+    border:1px solid rgba(246,241,228,0.18);
+    background:rgba(246,241,228,0.06);
+    color:var(--parchment);
+    font-size:12px;
+    font-family:'Inter',sans-serif;
+  }
+  .filter-row select option{ color:var(--ink); }
+
+  .plant-list{
+    flex:1;
+    overflow-y:auto;
+    padding:6px 0;
+  }
+  .plant-item{
+    padding:11px 20px;
+    cursor:pointer;
+    border-bottom:1px solid rgba(246,241,228,0.06);
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    transition:background 0.12s;
+  }
+  .plant-item:hover{ background:rgba(246,241,228,0.06); }
+  .plant-item.active{ background:rgba(193,105,58,0.22); border-left:3px solid var(--clay); padding-left:17px; }
+  .plant-item .common{ font-family:'Source Serif 4', serif; font-size:15px; font-weight:500; }
+  .plant-item .sci{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--sage); font-style:italic; }
+  .plant-item .meta{ font-size:11px; color:rgba(246,241,228,0.45); margin-top:2px; }
+  .plant-count{
+    padding:10px 20px;
+    font-size:11px;
+    font-family:'JetBrains Mono', monospace;
+    color:rgba(246,241,228,0.45);
+    border-top:1px solid rgba(246,241,228,0.12);
+  }
+
+  /* ===== Main panel ===== */
+  .main{
+    overflow-y:auto;
+    background:var(--parchment);
+  }
+  .topbar{
+    position:sticky; top:0; z-index:10;
+    background:var(--parchment);
+    border-bottom:1px solid var(--line);
+    padding:16px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .topbar-title{ display:flex; align-items:baseline; gap:12px; min-width:0; }
+  .topbar-title h2{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:24px;
+    margin:0;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .topbar-title .sci{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    font-style:italic;
+    white-space:nowrap;
+  }
+  .topbar-actions{ display:flex; gap:10px; align-items:center; flex-shrink:0; }
+
+  .btn{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:13px;
+    padding:9px 16px;
+    border-radius:7px;
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+    cursor:pointer;
+    transition:all 0.12s;
+  }
+  .btn:hover{ border-color:var(--ink-soft); }
+  .btn-primary{
+    background:var(--clay);
+    border-color:var(--clay);
+    color:#fff;
+  }
+  .btn-primary:hover{ background:var(--clay-dark); border-color:var(--clay-dark); }
+  .btn-primary:disabled{ background:#cbb6a6; border-color:#cbb6a6; cursor:not-allowed; }
+  .btn-ghost{
+    background:transparent;
+    border-color:transparent;
+    color:var(--ink-soft);
+  }
+  .btn-ghost:hover{ color:var(--ink); }
+  .btn-sm{ padding:6px 11px; font-size:12px; }
+
+  .specimen-card{
+    margin:24px 32px 0;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 22px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+  .specimen-id{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    background:var(--parchment-deep);
+    border-radius:5px;
+    padding:4px 9px;
+    letter-spacing:0.04em;
+  }
+  .specimen-tags{ display:flex; gap:6px; flex-wrap:wrap; }
+  .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    padding:3px 9px;
+    border-radius:99px;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .tag.native{ background:var(--ok-bg); color:var(--ok-text); border-color:#cfe4ce; }
+  .tag.invasive{ background:var(--warn-bg); color:var(--warn-text); border-color:#f0d8c2; }
+
+  .content{ padding:24px 32px 80px; }
+
+  .section{
+    margin-bottom:18px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .section-header{
+    padding:13px 20px;
+    background:var(--parchment-deep);
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    user-select:none;
+  }
+  .section-header h3{
+    font-family:'Source Serif 4', serif;
+    font-size:16px;
+    font-weight:600;
+    margin:0;
+    color:var(--moss);
+  }
+  .section-header .chev{
+    font-size:13px;
+    color:var(--ink-soft);
+    transition:transform 0.15s;
+  }
+  .section.collapsed .section-header .chev{ transform:rotate(-90deg); }
+  .section.collapsed .section-body{ display:none; }
+  .section-body{
+    padding:18px 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    gap:14px 16px;
+  }
+  .section-body.single{ grid-template-columns:1fr; }
+
+  .field{ display:flex; flex-direction:column; gap:5px; min-width:0; }
+  .field.wide{ grid-column:1 / -1; }
+  .field label{
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+  }
+  .field input[type=text], .field input[type=number], .field select, .field textarea{
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+    padding:8px 10px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:var(--parchment);
+    color:var(--ink);
+    width:100%;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:2px solid var(--sage);
+    outline-offset:1px;
+    background:#fff;
+  }
+  .field textarea{ resize:vertical; min-height:70px; font-family:'Inter',sans-serif; line-height:1.5; }
+  .field .hint{ font-size:11px; color:var(--ink-soft); font-style:italic; }
+
+  .checkbox-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .chip{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    padding:6px 10px;
+    border:1px solid var(--line);
+    border-radius:99px;
+    cursor:pointer;
+    background:var(--parchment);
+    user-select:none;
+    transition:all 0.1s;
+  }
+  .chip input{ margin:0; accent-color:var(--clay); }
+  .chip.checked{ background:var(--sage); border-color:var(--sage); color:#fff; }
+  .chip.checked input{ accent-color:#fff; }
+
+  .switch-field{ flex-direction:row; align-items:center; gap:8px; }
+  .switch-field label{ margin:0; text-transform:none; font-weight:500; font-size:13px; letter-spacing:0; }
+
+  .raw-json-wrap{ grid-column:1 / -1; }
+  .raw-json-wrap textarea{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    min-height:160px;
+    line-height:1.5;
+    white-space:pre;
+  }
+  .raw-json-wrap .err{ color:var(--clay-dark); font-size:12px; margin-top:4px; font-family:'JetBrains Mono',monospace; }
+
+  .empty-state{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:80vh;
+    text-align:center;
+    color:var(--ink-soft);
+    padding:0 40px;
+  }
+  .empty-state h2{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    color:var(--moss);
+    font-size:28px;
+    margin:0 0 8px;
+  }
+  .empty-state p{ max-width:420px; margin:6px 0; font-size:14px; line-height:1.6; }
+
+  /* ===== Setup modal ===== */
+  .modal-overlay{
+    position:fixed; inset:0;
+    background:rgba(31,38,32,0.55);
+    display:flex; align-items:center; justify-content:center;
+    z-index:100;
+    padding:20px;
+  }
+  .modal{
+    background:#fff;
+    border-radius:12px;
+    max-width:520px;
+    width:100%;
+    padding:28px 30px;
+    max-height:90vh;
+    overflow-y:auto;
+  }
+  .modal h2{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-size:24px;
+    margin:0 0 6px;
+    color:var(--moss);
+  }
+  .modal p{ font-size:13px; color:var(--ink-soft); line-height:1.6; margin:6px 0 16px; }
+  .modal .field{ margin-bottom:14px; }
+  .modal .field label{ text-transform:none; font-size:13px; font-weight:600; color:var(--ink); letter-spacing:0; margin-bottom:5px; }
+  .modal input{
+    width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:7px;
+    font-size:14px; font-family:'JetBrains Mono', monospace; background:var(--parchment);
+  }
+  .modal-actions{ display:flex; justify-content:flex-end; gap:10px; margin-top:18px; }
+  .token-help{
+    font-size:12px; color:var(--ink-soft); background:var(--parchment-deep);
+    border-radius:7px; padding:10px 12px; line-height:1.6; margin-top:6px;
+  }
+  .token-help a{ color:var(--clay-dark); }
+
+  .toast{
+    position:fixed; bottom:24px; right:24px;
+    background:var(--moss); color:var(--parchment);
+    padding:13px 20px; border-radius:8px;
+    font-size:13px; font-weight:500;
+    box-shadow:0 6px 24px rgba(0,0,0,0.18);
+    z-index:200;
+    max-width:380px;
+    display:none;
+    font-family:'Inter',sans-serif;
+  }
+  .toast.show{ display:block; animation:fadein 0.2s; }
+  .toast.error{ background:var(--clay-dark); }
+  @keyframes fadein{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+
+  .save-bar{
+    position:sticky; bottom:0; z-index:5;
+    background:#fff;
+    border-top:1px solid var(--line);
+    padding:14px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:12px;
+    box-shadow:0 -4px 12px rgba(0,0,0,0.04);
+  }
+  .save-bar .unsaved{
+    font-size:12px;
+    color:var(--clay-dark);
+    font-weight:600;
+    margin-right:auto;
+  }
+
+  ::-webkit-scrollbar{ width:10px; }
+  ::-webkit-scrollbar-track{ background:transparent; }
+  ::-webkit-scrollbar-thumb{ background:var(--line); border-radius:6px; }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <p class="eyebrow">Plant Guide — Field Editor</p>
+      <h1>swfl_plants_v3.json</h1>
+      <div class="gh-status">
+        <span class="gh-dot" id="ghDot"></span>
+        <span id="ghStatusText">Not connected</span>
+        <button class="btn btn-ghost btn-sm" id="ghConfigBtn" style="margin-left:auto;">Setup</button>
+      </div>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by name, ID, family…">
+    </div>
+    <div class="filter-row">
+      <select id="categoryFilter"><option value="">All categories</option></select>
+      <select id="statusFilter">
+        <option value="">All statuses</option>
+        <option value="published">Published</option>
+        <option value="needs_review">Needs review</option>
+        <option value="draft">Draft</option>
+      </select>
+    </div>
+    <div class="plant-list" id="plantList"></div>
+    <div class="plant-count" id="plantCount"></div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main" id="main">
+    <div class="empty-state">
+      <h2>Select a plant to begin</h2>
+      <p>Load your JSON file to get started. Search the index on the left, click a plant, edit its record card, then save your changes — directly to GitHub or as a downloaded file.</p>
+      <input type="file" id="fileInput" accept=".json" style="margin-top:10px;">
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- SETUP MODAL -->
+<div class="modal-overlay" id="setupModal" style="display:none;">
+  <div class="modal">
+    <h2>Connect to GitHub</h2>
+    <p>To save changes directly to your repo, the editor needs a personal access token. The token stays in your browser only — it's never saved to a file or sent anywhere except GitHub's API.</p>
+
+    <div class="field">
+      <label>Repository (owner/name)</label>
+      <input type="text" id="repoInput" placeholder="steerplasty/plant-guide" value="steerplasty/plant-guide">
+    </div>
+    <div class="field">
+      <label>File path in repo</label>
+      <input type="text" id="pathInput" placeholder="swfl_plants_v3.json" value="swfl_plants_v3.json">
+    </div>
+    <div class="field">
+      <label>Branch</label>
+      <input type="text" id="branchInput" placeholder="main" value="main">
+    </div>
+    <div class="field">
+      <label>Personal access token</label>
+      <input type="password" id="tokenInput" placeholder="ghp_…">
+      <div class="token-help">
+        Need a token? Go to GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens. Create one scoped to just this repo with <strong>Contents: Read and write</strong> permission. Paste it here — it's stored only for this browser session.
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="setupSkip">Skip (work offline)</button>
+      <button class="btn btn-primary" id="setupSave">Connect &amp; Load</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+let DATA = null;          // full JSON {metadata, plants}
+let TAG_SYSTEM = {};       // merged tag_system + new_tags
+let CURRENT_INDEX = null;  // index into DATA.plants
+let DIRTY = false;
+let GH = { repo:'', path:'', branch:'main', token:'', sha:null, connected:false };
+let SECTION_STATE = {};    // collapsed state per section id
+
+// ============================================================
+// FIELD SCHEMA — defines how each field renders
+// Types: text, textarea, number, select, multiselect(chips), boolean, raw
+// ============================================================
+const SECTIONS = [
+  {
+    id:'identity', title:'Identity',
+    fields:[
+      {key:'common_name', label:'Common name', type:'text'},
+      {key:'scientific_name', label:'Scientific name', type:'text', mono:true},
+      {key:'family', label:'Family', type:'text'},
+      {key:'category', label:'Category', type:'select', optionsFrom:'categories'},
+      {key:'subcategory', label:'Subcategory', type:'text'},
+      {key:'origin', label:'Origin', type:'select', tagKey:'origin'},
+      {key:'plant_type', label:'Plant type', type:'text'},
+      {key:'plant_tier', label:'Plant tier', type:'text'},
+      {key:'conservation_status', label:'Conservation status', type:'text'},
+      {key:'federally_listed', label:'Federally listed', type:'boolean'},
+      {key:'description', label:'Description', type:'textarea', wide:true},
+      {key:'fun_fact', label:'Fun fact', type:'textarea', wide:true},
+    ]
+  },
+  {
+    id:'tags', title:'Tags &amp; Classification',
+    fields:[
+      {key:'edibility', label:'Edibility', type:'select', tagKey:'edibility'},
+      {key:'pet_safety', label:'Pet safety', type:'select', tagKey:'pet_safety'},
+      {key:'flowering', label:'Flowering', type:'select', tagKey:'flowering'},
+      {key:'bloom_season', label:'Bloom season', type:'text'},
+      {key:'light', label:'Light', type:'multiselect', tagKey:'light'},
+      {key:'water_needs', label:'Water needs', type:'select', tagKey:'water_needs'},
+      {key:'salt_tolerance', label:'Salt tolerance', type:'select', tagKey:'salt_tolerance'},
+      {key:'growth_rate', label:'Growth rate', type:'select', tagKey:'growth_rate'},
+      {key:'mature_size', label:'Mature size', type:'select', tagKey:'mature_size'},
+      {key:'wildlife', label:'Wildlife', type:'multiselect', tagKey:'wildlife'},
+      {key:'multi_form', label:'Multi-form', type:'text', hint:'Comma-separated list, e.g. tree, shrub'},
+      {key:'allergen_level', label:'Allergen level', type:'text'},
+    ]
+  },
+  {
+    id:'sizing', title:'Size &amp; Growth',
+    fields:[
+      {key:'height_min_ft', label:'Height min (ft)', type:'number'},
+      {key:'height_max_ft', label:'Height max (ft)', type:'number'},
+      {key:'spread_min_ft', label:'Spread min (ft)', type:'number'},
+      {key:'spread_max_ft', label:'Spread max (ft)', type:'number'},
+      {key:'mature_size_category', label:'Mature size category', type:'text'},
+      {key:'can_be_kept_smaller', label:'Can be kept smaller', type:'boolean'},
+      {key:'growth_annual_inches', label:'Growth (in/yr)', type:'text'},
+      {key:'growth_rate_category', label:'Growth rate category', type:'text'},
+      {key:'lifespan', label:'Lifespan', type:'text'},
+      {key:'growth_notes', label:'Growth notes', type:'textarea', wide:true},
+      {key:'pruning_notes', label:'Pruning notes', type:'textarea', wide:true},
+      {key:'size_confidence', label:'Size data confidence', type:'select', tagKey:'data_confidence'},
+      {key:'growth_confidence', label:'Growth data confidence', type:'select', tagKey:'data_confidence'},
+    ]
+  },
+  {
+    id:'growing', title:'Growing Conditions',
+    fields:[
+      {key:'soil_type', label:'Soil type', type:'multiselect', tagKey:'soil_type'},
+      {key:'soil_ph_preference', label:'Soil pH preference', type:'select', tagKey:'soil_ph_preference'},
+      {key:'soil_ph_min', label:'Soil pH min', type:'number', step:'0.1'},
+      {key:'soil_ph_max', label:'Soil pH max', type:'number', step:'0.1'},
+      {key:'soil_drainage', label:'Soil drainage', type:'text'},
+      {key:'soil_confidence', label:'Soil data confidence', type:'select', tagKey:'data_confidence'},
+      {key:'florida_zone', label:'Florida zone(s)', type:'text', hint:'Comma-separated, e.g. 9b, 10a, 10b'},
+      {key:'usda_zone', label:'USDA zone(s)', type:'text'},
+      {key:'hurricane_resistance', label:'Hurricane resistance', type:'select', tagKey:'hurricane_resistance'},
+      {key:'hurricane_confidence', label:'Hurricane confidence', type:'select', tagKey:'data_confidence'},
+      {key:'fire_resistance', label:'Fire resistance', type:'text'},
+      {key:'deer_resistance', label:'Deer resistance', type:'text'},
+      {key:'invasive_roots', label:'Invasive roots', type:'select', tagKey:'invasive_roots'},
+      {key:'fertilizer_needs', label:'Fertilizer needs', type:'select', tagKey:'fertilizer_needs'},
+      {key:'drought_establishment', label:'Drought establishment', type:'select', tagKey:'drought_establishment'},
+      {key:'best_time_to_plant', label:'Best time to plant', type:'multiselect', tagKey:'best_time_to_plant'},
+      {key:'florida_friendly_approved', label:'Florida-Friendly approved', type:'boolean'},
+    ]
+  },
+  {
+    id:'care', title:'Care &amp; Maintenance',
+    fields:[
+      {key:'easy_to_grow_score', label:'Easy to grow score', type:'select', tagKey:'easy_to_grow_score'},
+      {key:'easy_to_grow_notes', label:'Easy to grow notes', type:'textarea', wide:true},
+      {key:'container_suitable', label:'Container suitable', type:'boolean'},
+      {key:'lawn_alternative', label:'Lawn alternative', type:'boolean'},
+      {key:'rain_garden_suitable', label:'Rain garden suitable', type:'boolean'},
+      {key:'erosion_control', label:'Erosion control', type:'boolean'},
+      {key:'traffic_tolerance', label:'Traffic tolerance', type:'text'},
+      {key:'seasonal_care', label:'Seasonal care', type:'textarea', wide:true},
+      {key:'seasonal_confidence', label:'Seasonal care confidence', type:'select', tagKey:'data_confidence'},
+      {key:'common_problems', label:'Common problems', type:'textarea', wide:true},
+      {key:'expert_tips', label:'Expert tips', type:'textarea', wide:true},
+      {key:'transplant_notes', label:'Transplant notes', type:'textarea', wide:true},
+    ]
+  },
+  {
+    id:'wildlife_eco', title:'Wildlife &amp; Ecology',
+    fields:[
+      {key:'beneficial_score', label:'Beneficial score (1–7)', type:'number'},
+      {key:'beneficial_score_notes', label:'Beneficial score notes', type:'textarea', wide:true},
+      {key:'pollinator_value', label:'Pollinator value', type:'text'},
+      {key:'attracts_specific', label:'Attracts (specific species)', type:'textarea', wide:true},
+      {key:'native_wildflower', label:'Native wildflower', type:'boolean'},
+      {key:'cut_flower', label:'Cut flower', type:'boolean'},
+      {key:'companion_plants', label:'Companion plants', type:'textarea', wide:true},
+      {key:'do_not_plant_near', label:'Do not plant near', type:'textarea', wide:true},
+      {key:'has_invasive_lookalike', label:'Has invasive lookalike', type:'boolean'},
+      {key:'looks_like_plants', label:'Looks like (plants)', type:'textarea', wide:true},
+      {key:'looks_like_notes', label:'Looks-like notes', type:'textarea', wide:true},
+      {key:'looks_like_confidence', label:'Looks-like confidence', type:'select', tagKey:'data_confidence'},
+      {key:'native_alternatives', label:'Native alternatives', type:'textarea', wide:true},
+    ]
+  },
+  {
+    id:'invasive', title:'Invasive Species Info',
+    fields:[
+      {key:'flepcc_category', label:'FLEPPC category', type:'text'},
+      {key:'habitat_invaded', label:'Habitat invaded', type:'textarea', wide:true},
+      {key:'management', label:'Management', type:'textarea', wide:true},
+      {key:'removal_method', label:'Removal method', type:'textarea', wide:true},
+      {key:'weed_status', label:'Weed status', type:'text'},
+    ]
+  },
+  {
+    id:'propagation', title:'Propagation &amp; Harvest',
+    fields:[
+      {key:'propagation_seed', label:'Propagation: seed', type:'boolean'},
+      {key:'propagation_cutting', label:'Propagation: cutting', type:'boolean'},
+      {key:'propagation_division', label:'Propagation: division', type:'boolean'},
+      {key:'propagation_confidence', label:'Propagation confidence', type:'select', tagKey:'data_confidence'},
+      {key:'germination_days', label:'Germination (days)', type:'text'},
+      {key:'germination_method', label:'Germination method', type:'textarea', wide:true},
+      {key:'germination_notes', label:'Germination notes', type:'textarea', wide:true},
+      {key:'germination_confidence', label:'Germination confidence', type:'select', tagKey:'data_confidence'},
+      {key:'stratification', label:'Stratification', type:'text'},
+      {key:'harvest_season', label:'Harvest season', type:'text'},
+      {key:'traditional_uses', label:'Traditional uses', type:'textarea', wide:true},
+      {key:'use', label:'Use', type:'textarea', wide:true},
+      {key:'varieties', label:'Varieties', type:'textarea', wide:true},
+    ]
+  },
+  {
+    id:'sourcing', title:'Sourcing &amp; Availability',
+    fields:[
+      {key:'where_to_buy_availability', label:'Availability', type:'select', tagKey:'where_to_buy_availability'},
+      {key:'where_to_buy_local', label:'Local sources', type:'textarea', wide:true},
+      {key:'where_to_buy_notes', label:'Sourcing notes', type:'textarea', wide:true},
+      {key:'where_to_buy_confidence', label:'Sourcing confidence', type:'select', tagKey:'data_confidence'},
+      {key:'hoa_friendly', label:'HOA friendly', type:'boolean'},
+      {key:'hoa_notes', label:'HOA notes', type:'textarea', wide:true},
+    ]
+  },
+  {
+    id:'site_admin', title:'Warnings, Status &amp; Review',
+    fields:[
+      {key:'warnings', label:'Warnings', type:'textarea', wide:true, hint:'One per line, or comma-separated'},
+      {key:'status', label:'Publish status', type:'select', options:['published','needs_review','draft']},
+      {key:'needs_review', label:'Needs review', type:'boolean'},
+      {key:'review_notes', label:'Review notes', type:'textarea', wide:true},
+      {key:'conservation_notes', label:'Conservation notes', type:'textarea', wide:true},
+      {key:'notes', label:'Internal notes', type:'textarea', wide:true},
+      {key:'last_verified', label:'Last verified', type:'text', hint:'YYYY-MM-DD'},
+      {key:'data_sources', label:'Data sources', type:'textarea', wide:true},
+    ]
+  },
+  {
+    id:'images', title:'Images',
+    fields:[
+      {key:'images.primary', label:'Primary image URL', type:'text', wide:true},
+    ]
+  },
+];
+
+// Fields handled above explicitly + structural/meta fields that should NOT
+// appear in the raw-JSON catch-all section.
+const HANDLED_KEYS = new Set([
+  'id','common_name','scientific_name','family','category','subcategory','origin',
+  'plant_type','plant_tier','conservation_status','federally_listed','description','fun_fact',
+  'edibility','pet_safety','flowering','bloom_season','light','water_needs','salt_tolerance',
+  'growth_rate','mature_size','wildlife','multi_form','allergen_level',
+  'height_min_ft','height_max_ft','spread_min_ft','spread_max_ft','mature_size_category',
+  'can_be_kept_smaller','growth_annual_inches','growth_rate_category','lifespan',
+  'growth_notes','pruning_notes','size_confidence','growth_confidence',
+  'soil_type','soil_ph_preference','soil_ph_min','soil_ph_max','soil_drainage','soil_confidence',
+  'florida_zone','usda_zone','hurricane_resistance','hurricane_confidence','fire_resistance',
+  'deer_resistance','invasive_roots','fertilizer_needs','drought_establishment',
+  'best_time_to_plant','florida_friendly_approved',
+  'easy_to_grow_score','easy_to_grow_notes','container_suitable','lawn_alternative',
+  'rain_garden_suitable','erosion_control','traffic_tolerance','seasonal_care','seasonal_confidence',
+  'common_problems','expert_tips','transplant_notes',
+  'beneficial_score','beneficial_score_notes','pollinator_value','attracts_specific',
+  'native_wildflower','cut_flower','companion_plants','do_not_plant_near',
+  'has_invasive_lookalike','looks_like_plants','looks_like_notes','looks_like_confidence',
+  'native_alternatives','flepcc_category','habitat_invaded','management','removal_method','weed_status',
+  'propagation_seed','propagation_cutting','propagation_division','propagation_confidence',
+  'germination_days','germination_method','germination_notes','germination_confidence',
+  'stratification','harvest_season','traditional_uses','use','varieties',
+  'where_to_buy_availability','where_to_buy_local','where_to_buy_notes','where_to_buy_confidence',
+  'hoa_friendly','hoa_notes','warnings','status','needs_review','review_notes','conservation_notes',
+  'notes','last_verified','data_sources','images',
+  // structural / rarely-hand-edited
+  'submitted_by','submitted_date','approved_by','approved_date','version',
+  'community_photo_count','community_photo_limit','epiphyte_type','fern_habitat',
+  'grass_type','underground_type','water_zone','scenarios','water_needs_detail'
+]);
+
+// ============================================================
+// UTIL
+// ============================================================
+function showToast(msg, isError=false){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (isError ? ' error' : '');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(()=>{ t.className = 'toast'; }, 4200);
+}
+
+function getNested(obj, path){
+  return path.split('.').reduce((o,k)=> (o && o[k] !== undefined) ? o[k] : undefined, obj);
+}
+function setNested(obj, path, value){
+  const keys = path.split('.');
+  let o = obj;
+  for(let i=0;i<keys.length-1;i++){
+    if(typeof o[keys[i]] !== 'object' || o[keys[i]] === null) o[keys[i]] = {};
+    o = o[keys[i]];
+  }
+  o[keys[keys.length-1]] = value;
+}
+
+function markDirty(){
+  DIRTY = true;
+  const bar = document.getElementById('saveBar');
+  if(bar) document.getElementById('unsavedLabel').textContent = 'Unsaved changes';
+}
+function markClean(){
+  DIRTY = false;
+  const lbl = document.getElementById('unsavedLabel');
+  if(lbl) lbl.textContent = '';
+}
+
+// ============================================================
+// LOADING DATA
+// ============================================================
+document.getElementById('fileInput').addEventListener('change', (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev)=>{
+    try{
+      const json = JSON.parse(ev.target.result);
+      loadData(json);
+      showToast('Loaded ' + (json.plants ? json.plants.length : 0) + ' plants from file.');
+    }catch(err){
+      showToast('Could not parse JSON: ' + err.message, true);
+    }
+  };
+  reader.readAsText(file);
+});
+
+function loadData(json){
+  DATA = json;
+  TAG_SYSTEM = Object.assign({}, json.metadata?.tag_system || {}, json.metadata?.new_tags || {});
+  buildCategoryFilter();
+  renderPlantList();
+  if(DATA.plants && DATA.plants.length){
+    selectPlant(0);
+  }
+}
+
+function buildCategoryFilter(){
+  const sel = document.getElementById('categoryFilter');
+  sel.innerHTML = '<option value="">All categories</option>';
+  const cats = DATA.metadata?.categories || [];
+  cats.forEach(c=>{
+    const opt = document.createElement('option');
+    opt.value = c; opt.textContent = c.replace(/_/g,' ');
+    sel.appendChild(opt);
+  });
+}
+
+// ============================================================
+// SIDEBAR LIST
+// ============================================================
+document.getElementById('searchInput').addEventListener('input', renderPlantList);
+document.getElementById('categoryFilter').addEventListener('change', renderPlantList);
+document.getElementById('statusFilter').addEventListener('change', renderPlantList);
+
+function renderPlantList(){
+  const list = document.getElementById('plantList');
+  if(!DATA){ list.innerHTML=''; document.getElementById('plantCount').textContent=''; return; }
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const cat = document.getElementById('categoryFilter').value;
+  const status = document.getElementById('statusFilter').value;
+
+  list.innerHTML = '';
+  let shown = 0;
+  DATA.plants.forEach((p, idx)=>{
+    if(cat && p.category !== cat) return;
+    if(status && p.status !== status) return;
+    if(q){
+      const hay = [p.common_name, p.scientific_name, p.id, p.family].filter(Boolean).join(' ').toLowerCase();
+      if(!hay.includes(q)) return;
+    }
+    shown++;
+    const div = document.createElement('div');
+    div.className = 'plant-item' + (idx === CURRENT_INDEX ? ' active' : '');
+    div.innerHTML = `
+      <div class="common">${escapeHtml(p.common_name || '(untitled)')}</div>
+      <div class="sci">${escapeHtml(p.scientific_name || '')}</div>
+      <div class="meta">${escapeHtml((p.category||'').replace(/_/g,' '))}${p.status==='needs_review' ? ' · needs review' : ''}</div>
+    `;
+    div.addEventListener('click', ()=> trySelectPlant(idx));
+    list.appendChild(div);
+  });
+  document.getElementById('plantCount').textContent = `${shown} of ${DATA.plants.length} plants`;
+}
+
+function trySelectPlant(idx){
+  if(DIRTY){
+    if(!confirm('You have unsaved changes to the current plant. Discard them and switch?')) return;
+  }
+  selectPlant(idx);
+}
+
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ============================================================
+// MAIN PANEL RENDERING
+// ============================================================
+function selectPlant(idx){
+  CURRENT_INDEX = idx;
+  DIRTY = false;
+  renderPlantList();
+  renderMain();
+}
+
+function renderMain(){
+  const main = document.getElementById('main');
+  if(CURRENT_INDEX === null || !DATA){
+    return;
+  }
+  const plant = DATA.plants[CURRENT_INDEX];
+
+  let html = '';
+  // Topbar
+  html += `
+  <div class="topbar">
+    <div class="topbar-title">
+      <h2>${escapeHtml(plant.common_name || '(untitled)')}</h2>
+      <span class="sci">${escapeHtml(plant.scientific_name || '')}</span>
+    </div>
+    <div class="topbar-actions">
+      <span style="font-size:12px; color:var(--ink-soft); font-family:'JetBrains Mono',monospace;">${CURRENT_INDEX+1} / ${DATA.plants.length}</span>
+      <button class="btn btn-ghost btn-sm" id="prevBtn">&larr; Prev</button>
+      <button class="btn btn-ghost btn-sm" id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>`;
+
+  // Specimen card
+  const originClass = plant.origin === 'native' ? 'native' : (plant.origin === 'invasive' ? 'invasive' : '');
+  html += `
+  <div class="specimen-card">
+    <span class="specimen-id">id: ${escapeHtml(plant.id || '')}</span>
+    <div class="specimen-tags">
+      ${plant.origin ? `<span class="tag ${originClass}">${escapeHtml(plant.origin)}</span>` : ''}
+      ${plant.category ? `<span class="tag">${escapeHtml(plant.category)}</span>` : ''}
+      ${plant.status ? `<span class="tag">${escapeHtml(plant.status)}</span>` : ''}
+      ${plant.plant_tier ? `<span class="tag">tier: ${escapeHtml(plant.plant_tier)}</span>` : ''}
+    </div>
+  </div>`;
+
+  // Content sections
+  html += '<div class="content">';
+  SECTIONS.forEach(section=>{
+    const collapsed = SECTION_STATE[section.id] === true;
+    html += `<div class="section ${collapsed?'collapsed':''}" data-section="${section.id}">
+      <div class="section-header">
+        <h3>${section.title}</h3>
+        <span class="chev">&#9660;</span>
+      </div>
+      <div class="section-body">`;
+    section.fields.forEach(f=>{
+      html += renderField(plant, f);
+    });
+    html += `</div></div>`;
+  });
+
+  // Raw / advanced JSON catch-all for unhandled fields
+  html += renderRawSection(plant);
+
+  html += '</div>'; // content
+
+  // Save bar
+  html += `
+  <div class="save-bar" id="saveBar">
+    <span class="unsaved" id="unsavedLabel"></span>
+    <button class="btn" id="downloadBtn">Download JSON</button>
+    <button class="btn btn-primary" id="saveGithubBtn">Save to GitHub</button>
+  </div>`;
+
+  main.innerHTML = html;
+
+  // Wire events
+  document.getElementById('prevBtn').addEventListener('click', ()=> {
+    if(CURRENT_INDEX > 0) trySelectPlant(CURRENT_INDEX - 1);
+  });
+  document.getElementById('nextBtn').addEventListener('click', ()=> {
+    if(CURRENT_INDEX < DATA.plants.length - 1) trySelectPlant(CURRENT_INDEX + 1);
+  });
+  document.querySelectorAll('.section-header').forEach(h=>{
+    h.addEventListener('click', ()=>{
+      const sec = h.closest('.section');
+      const id = sec.dataset.section;
+      const isCollapsed = sec.classList.toggle('collapsed');
+      SECTION_STATE[id] = isCollapsed;
+    });
+  });
+  document.getElementById('downloadBtn').addEventListener('click', downloadJSON);
+  document.getElementById('saveGithubBtn').addEventListener('click', saveToGithub);
+
+  wireFieldEvents(plant);
+  wireRawJsonEvents(plant);
+}
+
+function renderField(plant, f){
+  const val = getNested(plant, f.key);
+  const wideClass = f.wide ? ' wide' : '';
+  const id = 'f_' + f.key.replace(/\./g,'_');
+
+  if(f.type === 'text'){
+    const v = (val === undefined || val === null) ? '' : (Array.isArray(val) ? val.join(', ') : val);
+    return `<div class="field${wideClass}">
+      <label for="${id}">${f.label}</label>
+      <input type="text" id="${id}" data-key="${f.key}" data-type="${Array.isArray(val)?'list':'text'}" value="${escapeHtml(v)}" ${f.mono?'style="font-family:\'JetBrains Mono\',monospace;"':''}>
+      ${f.hint ? `<div class="hint">${f.hint}</div>` : ''}
+    </div>`;
+  }
+  if(f.type === 'number'){
+    const v = (val === undefined || val === null) ? '' : val;
+    return `<div class="field${wideClass}">
+      <label for="${id}">${f.label}</label>
+      <input type="number" id="${id}" data-key="${f.key}" data-type="number" value="${escapeHtml(v)}" ${f.step?`step="${f.step}"`:''}>
+      ${f.hint ? `<div class="hint">${f.hint}</div>` : ''}
+    </div>`;
+  }
+  if(f.type === 'textarea'){
+    const v = (val === undefined || val === null) ? '' : (Array.isArray(val) ? val.join('\n') : val);
+    return `<div class="field${wideClass}">
+      <label for="${id}">${f.label}</label>
+      <textarea id="${id}" data-key="${f.key}" data-type="${Array.isArray(val)?'listlines':'text'}">${escapeHtml(v)}</textarea>
+      ${f.hint ? `<div class="hint">${f.hint}</div>` : ''}
+    </div>`;
+  }
+  if(f.type === 'boolean'){
+    const checked = val === true ? 'checked' : '';
+    return `<div class="field switch-field${wideClass}">
+      <input type="checkbox" id="${id}" data-key="${f.key}" data-type="boolean" ${checked}>
+      <label for="${id}">${f.label}</label>
+    </div>`;
+  }
+  if(f.type === 'select'){
+    let options;
+    if(f.tagKey) options = TAG_SYSTEM[f.tagKey] || [];
+    else if(f.options) options = f.options;
+    else if(f.optionsFrom === 'categories') options = DATA.metadata?.categories || [];
+    else options = [];
+    let opts = `<option value="">—</option>`;
+    options.forEach(o=>{
+      opts += `<option value="${escapeHtml(o)}" ${val===o?'selected':''}>${escapeHtml(o.replace(/_/g,' '))}</option>`;
+    });
+    // If current value isn't in the option list, add it so nothing's lost
+    if(val && !options.includes(val)){
+      opts += `<option value="${escapeHtml(val)}" selected>${escapeHtml(val)} (current)</option>`;
+    }
+    return `<div class="field${wideClass}">
+      <label for="${id}">${f.label}</label>
+      <select id="${id}" data-key="${f.key}" data-type="select">${opts}</select>
+      ${f.hint ? `<div class="hint">${f.hint}</div>` : ''}
+    </div>`;
+  }
+  if(f.type === 'multiselect'){
+    const options = TAG_SYSTEM[f.tagKey] || [];
+    const current = Array.isArray(val) ? val : [];
+    let chips = '';
+    const allOptions = [...options];
+    current.forEach(c=>{ if(!allOptions.includes(c)) allOptions.push(c); });
+    allOptions.forEach(o=>{
+      const checked = current.includes(o);
+      chips += `<label class="chip ${checked?'checked':''}">
+        <input type="checkbox" data-multikey="${f.key}" value="${escapeHtml(o)}" ${checked?'checked':''}>
+        ${escapeHtml(o.replace(/_/g,' '))}
+      </label>`;
+    });
+    return `<div class="field${wideClass}">
+      <label>${f.label}</label>
+      <div class="checkbox-grid" data-multigroup="${f.key}">${chips}</div>
+      ${f.hint ? `<div class="hint">${f.hint}</div>` : ''}
+    </div>`;
+  }
+  return '';
+}
+
+function wireFieldEvents(plant){
+  // simple inputs/selects/textareas
+  document.querySelectorAll('[data-key]').forEach(el=>{
+    const apply = ()=>{
+      const key = el.dataset.key;
+      const type = el.dataset.type;
+      let value;
+      if(type === 'number'){
+        value = el.value === '' ? null : Number(el.value);
+      } else if(type === 'boolean'){
+        value = el.checked;
+      } else if(type === 'list'){
+        value = el.value.split(',').map(s=>s.trim()).filter(Boolean);
+      } else if(type === 'listlines'){
+        value = el.value.split('\n').map(s=>s.trim()).filter(Boolean);
+      } else {
+        value = el.value;
+      }
+      setNested(plant, key, value);
+      markDirty();
+    };
+    const evt = (el.type === 'checkbox' || el.tagName === 'SELECT') ? 'change' : 'input';
+    el.addEventListener(evt, apply);
+  });
+
+  // multiselect chip groups
+  document.querySelectorAll('[data-multigroup]').forEach(group=>{
+    const key = group.dataset.multigroup;
+    group.querySelectorAll('input[type=checkbox]').forEach(cb=>{
+      cb.addEventListener('change', ()=>{
+        const selected = Array.from(group.querySelectorAll('input[type=checkbox]:checked')).map(c=>c.value);
+        setNested(plant, key, selected);
+        cb.closest('.chip').classList.toggle('checked', cb.checked);
+        markDirty();
+      });
+    });
+  });
+}
+
+// ============================================================
+// RAW / ADVANCED JSON SECTION (for unhandled fields)
+// ============================================================
+function renderRawSection(plant){
+  const remaining = {};
+  Object.keys(plant).forEach(k=>{
+    if(!HANDLED_KEYS.has(k)) remaining[k] = plant[k];
+  });
+  const collapsed = SECTION_STATE['advanced'] !== false; // default collapsed = true unless explicitly opened
+  const advCollapsed = SECTION_STATE['advanced'] === undefined ? true : SECTION_STATE['advanced'];
+
+  let html = `<div class="section ${advCollapsed?'collapsed':''}" data-section="advanced">
+    <div class="section-header">
+      <h3>Advanced (raw JSON)</h3>
+      <span class="chev">&#9660;</span>
+    </div>
+    <div class="section-body single">
+      <div class="field">
+        <label>Other fields not shown above</label>
+        <div class="hint">Edit carefully — this must remain valid JSON. Includes: ${Object.keys(remaining).join(', ') || '(none)'}</div>
+        <div class="raw-json-wrap">
+          <textarea id="rawJsonField" spellcheck="false">${escapeHtml(JSON.stringify(remaining, null, 2))}</textarea>
+          <div class="err" id="rawJsonErr"></div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+  return html;
+}
+
+function wireRawJsonEvents(plant){
+  const ta = document.getElementById('rawJsonField');
+  if(!ta) return;
+  ta.addEventListener('input', ()=>{
+    const errEl = document.getElementById('rawJsonErr');
+    try{
+      const parsed = JSON.parse(ta.value);
+      errEl.textContent = '';
+      // remove old unhandled keys, then apply new ones
+      Object.keys(plant).forEach(k=>{
+        if(!HANDLED_KEYS.has(k)) delete plant[k];
+      });
+      Object.assign(plant, parsed);
+      markDirty();
+    }catch(err){
+      errEl.textContent = 'Invalid JSON — changes not applied yet: ' + err.message;
+    }
+  });
+}
+
+// ============================================================
+// SAVE: DOWNLOAD
+// ============================================================
+function downloadJSON(){
+  const blob = new Blob([JSON.stringify(DATA, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = (GH.path || 'swfl_plants_v3.json').split('/').pop();
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  markClean();
+  document.getElementById('unsavedLabel').textContent = '';
+  showToast('JSON file downloaded.');
+}
+
+// ============================================================
+// GITHUB INTEGRATION
+// ============================================================
+const setupModal = document.getElementById('setupModal');
+document.getElementById('ghConfigBtn').addEventListener('click', ()=> setupModal.style.display='flex');
+document.getElementById('setupSkip').addEventListener('click', ()=>{
+  setupModal.style.display='none';
+});
+document.getElementById('setupSave').addEventListener('click', async ()=>{
+  GH.repo = document.getElementById('repoInput').value.trim();
+  GH.path = document.getElementById('pathInput').value.trim();
+  GH.branch = document.getElementById('branchInput').value.trim() || 'main';
+  GH.token = document.getElementById('tokenInput').value.trim();
+
+  if(!GH.repo || !GH.path){
+    showToast('Please fill in repo and file path.', true);
+    return;
+  }
+  setupModal.style.display='none';
+  await connectAndLoad();
+});
+
+async function connectAndLoad(){
+  setGhStatus('connecting', 'Connecting…');
+  try{
+    const headers = {'Accept':'application/vnd.github+json'};
+    if(GH.token) headers['Authorization'] = 'Bearer ' + GH.token;
+    const url = `https://api.github.com/repos/${GH.repo}/contents/${GH.path}?ref=${GH.branch}`;
+    const res = await fetch(url, {headers});
+    if(!res.ok){
+      const body = await res.text();
+      throw new Error(`${res.status} ${res.statusText}`);
+    }
+    const json = await res.json();
+    GH.sha = json.sha;
+    const content = decodeBase64Utf8(json.content);
+    const parsed = JSON.parse(content);
+    loadData(parsed);
+    GH.connected = true;
+    setGhStatus('connected', `${GH.repo} @ ${GH.branch}`);
+    showToast(`Loaded ${parsed.plants.length} plants from GitHub.`);
+  }catch(err){
+    GH.connected = false;
+    setGhStatus('error', 'Connection failed');
+    showToast('GitHub load failed: ' + err.message + '. Check repo, path, branch, and token.', true);
+  }
+}
+
+function setGhStatus(state, text){
+  const dot = document.getElementById('ghDot');
+  dot.className = 'gh-dot' + (state==='connected' ? ' connected' : state==='error' ? ' error' : '');
+  document.getElementById('ghStatusText').textContent = text;
+}
+
+function decodeBase64Utf8(b64){
+  const binary = atob(b64.replace(/\n/g,''));
+  const bytes = new Uint8Array(binary.length);
+  for(let i=0;i<binary.length;i++) bytes[i] = binary.charCodeAt(i);
+  return new TextDecoder('utf-8').decode(bytes);
+}
+function encodeBase64Utf8(str){
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  bytes.forEach(b=> binary += String.fromCharCode(b));
+  return btoa(binary);
+}
+
+async function saveToGithub(){
+  if(!GH.connected || !GH.token){
+    showToast('Not connected to GitHub. Click "Setup" to configure your repo and token.', true);
+    setupModal.style.display='flex';
+    return;
+  }
+  const btn = document.getElementById('saveGithubBtn');
+  btn.disabled = true;
+  btn.textContent = 'Saving…';
+  try{
+    const content = JSON.stringify(DATA, null, 2);
+    const plant = DATA.plants[CURRENT_INDEX];
+    const msg = `Update ${plant.common_name || plant.id || 'plant'} via field editor`;
+
+    const url = `https://api.github.com/repos/${GH.repo}/contents/${GH.path}`;
+    const res = await fetch(url, {
+      method:'PUT',
+      headers:{
+        'Accept':'application/vnd.github+json',
+        'Authorization':'Bearer ' + GH.token,
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({
+        message: msg,
+        content: encodeBase64Utf8(content),
+        sha: GH.sha,
+        branch: GH.branch
+      })
+    });
+    if(!res.ok){
+      const errBody = await res.json().catch(()=>({}));
+      throw new Error(errBody.message || `${res.status} ${res.statusText}`);
+    }
+    const json = await res.json();
+    GH.sha = json.content.sha;
+    markClean();
+    document.getElementById('unsavedLabel').textContent = '';
+    showToast('Saved to GitHub — committed to ' + GH.branch + '.');
+  }catch(err){
+    showToast('Save failed: ' + err.message, true);
+  }finally{
+    btn.disabled = false;
+    btn.textContent = 'Save to GitHub';
+  }
+}
+
+// ============================================================
+// INIT — show setup modal on first load
+// ============================================================
+window.addEventListener('load', ()=>{
+  setupModal.style.display = 'flex';
+});
+
+// Warn before leaving with unsaved changes
+window.addEventListener('beforeunload', (e)=>{
+  if(DIRTY){
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+</script>
+</body>
+</html>
