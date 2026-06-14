@@ -1179,7 +1179,24 @@ async function connectAndLoad(){
       throw new Error('Response was not valid JSON (status ' + res.status + '). This usually means the request was blocked or redirected before reaching GitHub.');
     }
     GH.sha = json.sha;
-    const content = decodeBase64Utf8(json.content);
+    let content;
+    if(json.content && json.content.length > 0){
+      content = decodeBase64Utf8(json.content);
+    } else if(json.git_url) {
+      // Files over ~1MB don't include inline content from the contents API.
+      // Fall back to the Git Blobs API, which returns content regardless of size.
+      const blobRes = await fetch(json.git_url, {headers});
+      const blobRaw = await blobRes.text();
+      if(!blobRes.ok){
+        let detail = blobRaw;
+        try{ detail = JSON.parse(blobRaw).message || blobRaw; }catch(_e){}
+        throw new Error(`Blob fetch failed: ${blobRes.status} ${blobRes.statusText} — ${detail}`);
+      }
+      const blobJson = JSON.parse(blobRaw);
+      content = decodeBase64Utf8(blobJson.content);
+    } else {
+      throw new Error('GitHub returned an empty file with no blob reference. The path may point to a directory rather than a file.');
+    }
     const parsed = JSON.parse(content);
     loadData(parsed);
     GH.connected = true;
