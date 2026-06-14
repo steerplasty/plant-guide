@@ -1166,11 +1166,18 @@ async function connectAndLoad(){
     if(GH.token) headers['Authorization'] = 'Bearer ' + GH.token;
     const url = `https://api.github.com/repos/${GH.repo}/contents/${GH.path}?ref=${GH.branch}`;
     const res = await fetch(url, {headers});
+    const raw = await res.text();
     if(!res.ok){
-      const body = await res.text();
-      throw new Error(`${res.status} ${res.statusText}`);
+      let detail = raw;
+      try{ detail = JSON.parse(raw).message || raw; }catch(_e){}
+      throw new Error(`${res.status} ${res.statusText} — ${detail}`);
     }
-    const json = await res.json();
+    let json;
+    try{
+      json = JSON.parse(raw);
+    }catch(_e){
+      throw new Error('Response was not valid JSON (status ' + res.status + '). This usually means the request was blocked or redirected before reaching GitHub.');
+    }
     GH.sha = json.sha;
     const content = decodeBase64Utf8(json.content);
     const parsed = JSON.parse(content);
